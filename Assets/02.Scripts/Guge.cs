@@ -6,11 +6,24 @@ using UnityEngine.UI;
 public class Guge : MonoBehaviour
 {
     [SerializeField] RectTransform Size;
+    public Text TimeTxt;
     public  float x = 0f;
-
+    int MaxTime = 25;
+    float currentTime;
     private void Update()
     {
+        currentTime = Mathf.RoundToInt(MaxTime - Time.time);
+        TimeTxt.text = $"남은시간:{currentTime}";
         Size.localScale = new Vector3(x, 1, 1);
         Debug.Log(Size.localScale);
+        MaxGage();
+    }
+
+    private void MaxGage()
+    {
+        if(x >= 1)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(6);
+        }
     }
 }
