@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01.Scenes/MingamePool.unity
     guid: 4c506219cbaad4d419f12a833596fd75
+  - enabled: 1
+    path: Assets/01.Scenes/MingamepoolStart.unity
+    guid: 234f01a688801284e82ba1854885cd03
   m_configObjects: {}
