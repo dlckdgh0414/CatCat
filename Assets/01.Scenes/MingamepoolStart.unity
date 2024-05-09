@@ -5074,6 +5074,7 @@ MonoBehaviour:
   TimeTxt: {fileID: 1344982833}
   x: 0
   currentTime: 0
+  oldTime: 0
 --- !u!1 &1832785921
 GameObject:
   m_ObjectHideFlags: 0

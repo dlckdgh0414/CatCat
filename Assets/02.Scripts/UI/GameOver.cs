@@ -14,7 +14,6 @@ public class GameOver : MonoBehaviour
     public void Restart()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
-        UI.SetActive(false);
-        Time.timeScale = 1;
+        gameObject.SetActive(false);
     }
 }
