@@ -18,7 +18,7 @@ public class Guge : MonoBehaviour
     private void Update()
     {
         currentTime = MaxTime - Time.time;
-        TimeTxt.text = $"남은시간:{Mathf.RoundToInt(currentTime)}";
+        TimeTxt.text = $"남은시간:{Mathf.Round(currentTime)}";
         Size.localScale = new Vector3(x, 1, 1);
         Debug.Log(Size.localScale);
         MaxGage();
@@ -28,7 +28,7 @@ public class Guge : MonoBehaviour
     }
     private void MinTime()
     {
-        if(currentTime==0 && Time.timeScale == 1)
+        if(currentTime<=0)
         {
             GameOver.SetActive(true);
         }
