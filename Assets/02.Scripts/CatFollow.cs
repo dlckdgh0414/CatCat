@@ -33,7 +33,7 @@ public class CatFollow : MonoBehaviour
         else if(collision.gameObject.CompareTag("Trash"))
         {
             Destroy(collision.gameObject);
-            G.x -= 0.03f;
+            G.x -= 0.05f;
         }
     }
 }

@@ -20,6 +20,7 @@ public class CatFoot : MonoBehaviour
     public void OnClick()
     {
         StartCoroutine(catMove());
+        StartCoroutine(ClickDelay(5));
     }
     IEnumerator catMove()
     {
@@ -44,5 +45,9 @@ public class CatFoot : MonoBehaviour
                 UI3.transform.DOMove(new Vector3(-25, 0, 0), 1f);
                 break;
         }
+    }
+    IEnumerator ClickDelay(float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
     }
 }
