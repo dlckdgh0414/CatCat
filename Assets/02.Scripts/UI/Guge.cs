@@ -9,24 +9,28 @@ public class Guge : MonoBehaviour
     [SerializeField] GameObject GameOver;
     public Text TimeTxt;
     public  float x = 0f;
-    int MaxTime = 20;
-    float currentTime;
+    float MaxTime = 20f;
+    public float currentTime;
+    //private void Awake()
+    //{
+    //    currentTime = 20f;
+    //}
     private void Update()
     {
-        currentTime = Mathf.RoundToInt(MaxTime - Time.time);
-        Debug.Log(currentTime);
-        TimeTxt.text = $"남은시간:{currentTime}";
+        currentTime = MaxTime - Time.time;
+        TimeTxt.text = $"남은시간:{Mathf.RoundToInt(currentTime)}";
         Size.localScale = new Vector3(x, 1, 1);
         Debug.Log(Size.localScale);
         MaxGage();
         MinTime();
+
+        
     }
     private void MinTime()
     {
-        if(currentTime==0)
+        if(currentTime==0 && Time.timeScale == 1)
         {
             GameOver.SetActive(true);
-            Time.timeScale = 0;
         }
     }
     private void MaxGage()
