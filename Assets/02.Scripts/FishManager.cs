@@ -12,6 +12,7 @@ public class FishManager : MonoBehaviour
     {
         if (creatTime < currentTime)
         {
+            creatTime = Random.Range(2f, 5f);
             int FishIdex = Random.Range(0, FishPrefab.Length);
             Instantiate(FishPrefab[FishIdex], transform.position, Quaternion.identity);
             currentTime = 0;

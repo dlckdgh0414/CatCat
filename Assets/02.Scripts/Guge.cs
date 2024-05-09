@@ -14,13 +14,13 @@ public class Guge : MonoBehaviour
     private void Update()
     {
         currentTime = Mathf.RoundToInt(MaxTime - Time.time);
+        Debug.Log(currentTime);
         TimeTxt.text = $"남은시간:{currentTime}";
         Size.localScale = new Vector3(x, 1, 1);
         Debug.Log(Size.localScale);
         MaxGage();
         MinTime();
     }
-
     private void MinTime()
     {
         if(currentTime==0)

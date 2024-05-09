@@ -4077,7 +4077,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 791966208}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1483012283}
+        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
+        m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &791966208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4631,7 +4643,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1483012279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4727,6 +4739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ed910c927c39a41aaa8276acb0232e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UI: {fileID: 1483012278}
 --- !u!1 &1500786721
 GameObject:
   m_ObjectHideFlags: 0

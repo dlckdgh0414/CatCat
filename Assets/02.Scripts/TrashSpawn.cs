@@ -10,7 +10,8 @@ public class TrashSpawn : MonoBehaviour
     private void Update()
     {
         if (creatTime<currentTime)
-        { 
+        {
+            creatTime = Random.Range(2f, 5f);
             int TrashIdex = Random.Range(0, Trash.Length);
             Instantiate(Trash[TrashIdex], transform.position, Quaternion.identity);
             currentTime = 0;
