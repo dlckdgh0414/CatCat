@@ -9,6 +9,8 @@ using UnityEngine.Timeline;
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
+    public PlayableDirector timeLine;
+
     private void Awake()
     {
         gameObject.SetActive(false);
@@ -22,6 +24,7 @@ public class UIManager : MonoBehaviour
     {
         Time.timeScale = 1;
         StartCoroutine(delay(2,sceneNum));
+        timeLine.Play();
     }
     public void NoClik()
     {
