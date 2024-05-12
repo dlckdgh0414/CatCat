@@ -7,9 +7,8 @@ using DG.Tweening;
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
-
     private void Awake()
-    { 
+    {
         gameObject.SetActive(false);
         if (Instance != null)
         {
