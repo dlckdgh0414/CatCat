@@ -2,13 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Playables;
+using UnityEngine.Timeline;
 public class MinGameTigger : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    public PlayableDirector timeLine;
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Player")
+        if (collision.CompareTag("Player"))
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(4);
+            timeLine.Play();
         }
     }
 }
