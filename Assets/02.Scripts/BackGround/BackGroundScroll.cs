@@ -11,7 +11,7 @@ public class BackGroundScroll : MonoBehaviour
     void Start()
     {
         startpos = transform.position.x;
-        length = GetComponent<SpriteRenderer>().bounds.size.x;
+        length = GetComponentInChildren<SpriteRenderer>().bounds.size.x;
     }
 
     void FixedUpdate()
