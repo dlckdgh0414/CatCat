@@ -23,7 +23,7 @@ public class UIManager : MonoBehaviour
     public void OnClik(int sceneNum)
     {
         Time.timeScale = 1;
-        StartCoroutine(delay(2,sceneNum));
+        StartCoroutine(delay(3,sceneNum));
         timeLine.Play();
     }
     public void NoClik()
