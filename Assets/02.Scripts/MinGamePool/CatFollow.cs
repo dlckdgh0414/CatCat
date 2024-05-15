@@ -24,11 +24,11 @@ public class CatFollow : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            CatFoot.transform.DOMove(new Vector3(0.23f, -0.9f, 0), 1f);
+            CatFoot.transform.DOMove(new Vector3(0.23f, 3.2f, 0), 0.5f);
         }
         else if (Input.GetMouseButtonUp(0))
         {
-            CatFoot.transform.DOMove(new Vector3(0.23f, -5.07f, 0), 1f);
+            CatFoot.transform.DOMove(new Vector3(0.23f, 5.41f, 0), 0.5f);
         }
     }
 
