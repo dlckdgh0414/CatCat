@@ -1,41 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using DG.Tweening;
 public class CatFollow : MonoBehaviour
 {
     private Guge G;
 
     private BoxCollider2D Box;
+    [SerializeField] GameObject CatFoot;
 
     private void Awake()
     {
-        Vector2 mousePos = Input.mousePosition;
         G = FindObjectOfType<Guge>();
         Box = GetComponent<BoxCollider2D>();
       
     }
+
     private void Update()
     {
-        Mouse();
-        GetMousClik();
+        GetMOuseClike();
     }
-
-    private void Mouse()
+    private void GetMOuseClike()
     {
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = new Vector3(mousePos.x, mousePos.y, 0);
-    }
-
-    private void GetMousClik()
-    {
-        if(Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0))
         {
-            Box.isTrigger = false;
+            CatFoot.transform.DOMove(new Vector3(0.23f, -0.9f, 0), 1f);
         }
-        else
+        else if (Input.GetMouseButtonUp(0))
         {
-            Box.isTrigger = true;
+            CatFoot.transform.DOMove(new Vector3(0.23f, -5.07f, 0), 1f);
         }
     }
 
@@ -46,7 +39,7 @@ public class CatFollow : MonoBehaviour
             Destroy(collision.gameObject);
             G.x += 0.05f;
         }
-        else if(collision.gameObject.CompareTag("Trash"))
+        else if (collision.gameObject.CompareTag("Trash"))
         {
             Destroy(collision.gameObject);
             G.x -= 0.03f;
