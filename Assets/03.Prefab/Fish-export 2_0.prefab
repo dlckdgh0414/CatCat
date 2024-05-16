@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -4175272716484456013}
   m_Layer: 6
   m_Name: Fish-export 2_0
-  m_TagString: Untagged
+  m_TagString: GoldFish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

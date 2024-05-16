@@ -44,5 +44,9 @@ public class CatFollow : MonoBehaviour
             Destroy(collision.gameObject);
             G.x -= 0.03f;
         }
+        else if(collision.gameObject.CompareTag("GoldFish"))
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }
