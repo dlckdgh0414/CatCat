@@ -10,4 +10,9 @@ public class BigTrash : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody2D>();
     }
+
+    private void Update()
+    {
+      
+    }
 }
