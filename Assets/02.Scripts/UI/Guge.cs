@@ -11,7 +11,6 @@ public class Guge : MonoBehaviour
     private void Update()
     {
         Size.localScale = new Vector3(x, 1, 1);
-        Debug.Log(Size.localScale);
         MaxGage();
     }
     private void MaxGage()
