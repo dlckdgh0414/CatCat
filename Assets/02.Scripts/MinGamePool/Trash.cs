@@ -5,7 +5,7 @@ using UnityEngine;
 public class Trash : MonoBehaviour
 {
     Rigidbody2D rigid;
-    private float Power = 0.5f;
+    private float Power = 1f;
 
     private void Awake()
     {
