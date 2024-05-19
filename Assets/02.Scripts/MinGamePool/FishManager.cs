@@ -10,6 +10,8 @@ public class FishManager : MonoBehaviour
     [SerializeField] GameObject GoldFish;
     public GameObject[] FishPrefab;
 
+    Stack<GameObject> FishPool = new Stack<GameObject>();
+
     private void Update()
     {
         if (creatTime < currentTime)
