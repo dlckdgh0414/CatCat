@@ -25,6 +25,13 @@ public class FishManager : MonoBehaviour
             }
         }
     }
+    private void CreatFishs()
+    {
+        for(int i =0; i<3; i++)
+        {
+
+        }
+    }
     private void FixedUpdate()
     {
         currentTime += Time.fixedDeltaTime;
