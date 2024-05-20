@@ -5707,13 +5707,11 @@ GameObject:
   - component: {fileID: 300937759}
   - component: {fileID: 300937761}
   - component: {fileID: 300937766}
-  - component: {fileID: 300937765}
   - component: {fileID: 300937768}
-  - component: {fileID: 300937772}
   - component: {fileID: 300937770}
   - component: {fileID: 300937773}
-  - component: {fileID: 300937774}
   - component: {fileID: 300937775}
+  - component: {fileID: 300937774}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -5815,18 +5813,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &300937765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 300937757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45e22c1abab64ea41ba09c29f6659e45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &300937766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5876,21 +5862,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &300937772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 300937757}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19312e1901efc44fa4ae9b36a379f7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  whatIsBottom:
-    serializedVersion: 2
-    m_Bits: 8
 --- !u!70 &300937773
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -26338,6 +26309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeLine: {fileID: 609164771}
+  Playerpos: {fileID: 300937757}
 --- !u!114 &1911020618
 MonoBehaviour:
   m_ObjectHideFlags: 0

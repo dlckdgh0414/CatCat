@@ -755,6 +755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeLine: {fileID: 0}
+  Playerpos: {fileID: 0}
 --- !u!1 &590577952
 GameObject:
   m_ObjectHideFlags: 0
@@ -1825,7 +1826,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 833209217}
-  - {fileID: 1923136215}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1775226259
@@ -1844,7 +1844,7 @@ GameObject:
   - component: {fileID: 1775226261}
   m_Layer: 0
   m_Name: Buttom
-  m_TagString: Untagged
+  m_TagString: Buttom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5972,7 +5972,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1775226260}
-  m_Father: {fileID: 1640618154}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1984856855
 GameObject:
@@ -6256,3 +6256,4 @@ SceneRoots:
   - {fileID: 1508232679}
   - {fileID: 277612286}
   - {fileID: 152125113}
+  - {fileID: 1923136215}

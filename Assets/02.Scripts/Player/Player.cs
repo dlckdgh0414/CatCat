@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    private void Start()
+    private void OnEnable()
     {
         DontDestroyOnLoad(gameObject);
     }

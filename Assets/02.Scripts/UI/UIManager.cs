@@ -1,16 +1,15 @@
 using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
-using UnityEngine.UI;
-using DG.Tweening;
+
 using UnityEngine.Playables;
-using UnityEngine.Timeline;
+
 
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
     public PlayableDirector timeLine;
-
+    [SerializeField] GameObject Playerpos;
     private void Awake()
     {
         gameObject.SetActive(false);
@@ -34,6 +33,7 @@ public class UIManager : MonoBehaviour
     IEnumerator delay(float delayTime, int sceneNum)
     {
         yield return new WaitForSeconds(delayTime);
+        Playerpos.transform.position = Vector2.zero;
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneNum);
     }
 }
