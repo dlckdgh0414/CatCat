@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class BigTrash : MonoBehaviour
 {
-    [SerializeField] Transform finallocation;
-    [SerializeField] Transform initiallocation;
-    float Dist;
+    Rigidbody2D rigid;
+    float Speed = 10f;
+
+    private void Awake()
+    {
+        rigid = GetComponent<Rigidbody2D>();
+    }
 
     private void Update()
     {
-      Dist = Vector3.Distance(finallocation.position, initiallocation.position);
-      
+        rigid.AddForce(Vector2.left * Speed);
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class GoldFish : MonoBehaviour
 {
     Rigidbody2D rigid;
-    float Power=8f;
+    float Power=13f;
 
     private void Awake()
     {

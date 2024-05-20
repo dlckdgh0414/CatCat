@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//창호는 씹게이
 public class FishManager : MonoBehaviour
 {
     public static FishManager Instance;
@@ -13,6 +12,7 @@ public class FishManager : MonoBehaviour
     public GameObject[] FishPrefab;
 
    public Stack<GameObject> FishPool = new Stack<GameObject>();
+    public Stack<GameObject> GoldFishPool = new Stack<GameObject>();
 
     private void Awake()
     {
@@ -55,7 +55,17 @@ public class FishManager : MonoBehaviour
             GetFishSpawnRange = Random.Range(0, 10);
             if(GetFishSpawnRange<=2)
             {
-                Instantiate(GoldFish, transform.position, Quaternion.identity);
+                GameObject GoldFishObj;
+                if(GoldFishPool.Count >0)
+                {
+                    GoldFishObj = GoldFishPool.Pop();
+                    GoldFishObj.SetActive(true);
+                }
+                else
+                {
+                    GoldFishObj = Instantiate(GoldFish);
+                }
+                GoldFishObj.transform.position = transform.position;
             }
         }
     }
@@ -66,6 +76,13 @@ public class FishManager : MonoBehaviour
             GameObject FishObj = Instantiate(FishPrefab[n]);
             FishPool.Push(FishObj);
             FishObj.SetActive(false);
+        }
+        for(int i = 0; i<3; i++)
+        {
+            GameObject GoldFishObj = Instantiate(GoldFish);
+            GoldFishPool.Push(GoldFishObj);
+            GoldFishObj.SetActive(false);
+
         }
     }
     private void FixedUpdate()

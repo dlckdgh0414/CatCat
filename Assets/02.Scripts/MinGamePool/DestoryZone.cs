@@ -8,11 +8,17 @@ public class DestoryZone : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Fish"))
         {
-            Destroy(collision.gameObject);
+            FishManager.Instance.FishPool.Push(collision.gameObject);
+            collision.gameObject.SetActive(false);
         }
         else if (collision.gameObject.CompareTag("Trash"))
         {
             Destroy(collision.gameObject);
+        }
+        else if(collision.gameObject.CompareTag("GoldFish"))
+        {
+            FishManager.Instance.GoldFishPool.Push(collision.gameObject);
+            collision.gameObject.SetActive(false);
         }
     }
 }

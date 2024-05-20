@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4665205634204772789}
   - component: {fileID: 4931736738657950710}
   - component: {fileID: 8950822043995805460}
+  - component: {fileID: -738295094207739532}
   m_Layer: 7
   m_Name: garbage bag 1
   m_TagString: Untagged
@@ -158,3 +159,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.18121687, y: 0.21}
   m_EdgeRadius: 0
+--- !u!114 &-738295094207739532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4885156574655336315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2602e3e9cc3a5a4185474beb7a747b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finallocation: {fileID: 0}
+  initiallocation: {fileID: 0}
