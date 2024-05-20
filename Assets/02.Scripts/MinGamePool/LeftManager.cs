@@ -18,6 +18,7 @@ public class LeftManager : MonoBehaviour
             currentTime = 0;
         }
     }
+
     private void FixedUpdate()
     {
         currentTime +=Time.fixedDeltaTime;
