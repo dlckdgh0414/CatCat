@@ -5,7 +5,7 @@ using UnityEngine;
 public class BigTrash : MonoBehaviour
 {
     Rigidbody2D rigid;
-    float Speed = 10f;
+    float Speed = 2f;
 
     private void Awake()
     {

@@ -8,6 +8,7 @@ TagManager:
   - Fish
   - Trash
   - GoldFish
+  - BigTrash
   layers:
   - Default
   - TransparentFX

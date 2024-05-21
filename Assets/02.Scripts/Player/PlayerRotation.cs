@@ -25,11 +25,11 @@ public class PlayerDotween : MonoBehaviour
     private void Ray()
     {
         Hille = Physics2D.Raycast(rigid.position, Vector3.down, 3f, 1 << 3);
-        if(HilleHit)
+        if(HilleHit&&Hille)
         {
-            if (Hille.collider.gameObject.tag == "Buttom")
+            if (Hille.collider.gameObject.CompareTag("Buttom"))
             {
-                HilleHit = false;
+                HilleHit = false;   
                 StartCoroutine(DelayHit(0.1f));
                 Player.transform.DORotate(new Vector3(0, 0, -30), 1f);
                 rigid.gravityScale = 1.5f;
