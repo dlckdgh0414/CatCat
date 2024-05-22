@@ -9,6 +9,9 @@ public class TrashSpawn : MonoBehaviour
     [SerializeField] private float BigTrashSpawnRange; 
     [SerializeField] private float currentTime;
     [SerializeField] private float creatTime = 4.5f;
+
+    Stack<GameObject> TrashPool = new Stack<GameObject>();
+
     private void Update()
     {
         if (creatTime<currentTime)
@@ -25,6 +28,12 @@ public class TrashSpawn : MonoBehaviour
         }
        
     }
+
+    private void CreatTrash()
+    {
+
+    }
+
     private void FixedUpdate()
     {
         currentTime += Time.fixedDeltaTime;

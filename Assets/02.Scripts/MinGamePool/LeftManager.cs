@@ -23,7 +23,17 @@ public class LeftManager : MonoBehaviour
         {
             creatTime = Random.Range(2f, 5f);
             int FishIdex = Random.Range(0, FishPrefab.Length);
-            Instantiate(FishPrefab[FishIdex], transform.position, Quaternion.identity);
+            GameObject FishObj;
+            if(FishPool.Count>0)
+            {
+              FishObj = FishPool.Pop();
+              FishObj.SetActive(true);
+            }
+            else
+            {
+                FishObj = Instantiate(FishPrefab[FishIdex]);
+            }
+            FishObj.transform.position = transform.position;
             currentTime = 0;
         }
     }
