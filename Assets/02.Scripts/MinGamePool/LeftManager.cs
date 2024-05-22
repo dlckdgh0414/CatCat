@@ -8,6 +8,15 @@ public class LeftManager : MonoBehaviour
    [SerializeField] private float creatTime = 2f;
     public GameObject[] FishPrefab;
 
+    Stack<GameObject> FishPool = new Stack<GameObject>();
+
+    private void Start()
+    {      
+         for (int i = 0; i < 7; i++)
+         {
+              CreatFishs(i);
+         }        
+    }
     private void Update()
     {
         if(creatTime<currentTime)
@@ -18,7 +27,15 @@ public class LeftManager : MonoBehaviour
             currentTime = 0;
         }
     }
-
+    public void CreatFishs(int n)
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            GameObject FishObj = Instantiate(FishPrefab[n]);
+            FishPool.Push(FishObj);
+            FishObj.SetActive(false);
+        }
+    }
     private void FixedUpdate()
     {
         currentTime +=Time.fixedDeltaTime;

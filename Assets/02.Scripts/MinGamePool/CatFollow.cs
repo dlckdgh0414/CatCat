@@ -50,5 +50,10 @@ public class CatFollow : MonoBehaviour
             Destroy(collision.gameObject);
             G.x += 0.2f;
         }
+        else if(collision.gameObject.CompareTag("BigTrash"))
+        {
+            Destroy(collision.gameObject);
+            G.trashx += 0.4f;
+        }
     }
 }

@@ -11,13 +11,13 @@ public class Tirgger : MonoBehaviour
     {
         box = GetComponent<BoxCollider2D>();
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.name == "Player")
+        if (collision.gameObject.name == "Player")
         {
             UI.SetActive(true);
-            box.isTrigger = true;
-            Time.timeScale = 0; 
+            Time.timeScale = 0;
         }
     }
 }
