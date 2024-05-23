@@ -39,7 +39,7 @@ public class TrashSpawn : MonoBehaviour
             }
             else
             {
-                Instantiate(Trash[TrashIdex]);
+               TrashObj = Instantiate(Trash[TrashIdex]);
 
             }
             TrashObj.transform.position = transform.position;

@@ -10,6 +10,20 @@ public class LeftManager : MonoBehaviour
 
     Stack<GameObject> FishPool = new Stack<GameObject>();
 
+    public static LeftManager Intacne;
+
+    private void Awake()
+    {
+        if(Intacne == null)
+        {
+            Intacne = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void Start()
     {      
          for (int i = 0; i < 7; i++)
