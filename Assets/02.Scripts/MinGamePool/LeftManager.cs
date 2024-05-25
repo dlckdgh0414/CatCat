@@ -8,7 +8,7 @@ public class LeftManager : MonoBehaviour
    [SerializeField] private float creatTime = 2f;
     public GameObject[] FishPrefab;
 
-    Stack<GameObject> FishPool = new Stack<GameObject>();
+   public Stack<GameObject> FishPool = new Stack<GameObject>();
 
     public static LeftManager Intacne;
 

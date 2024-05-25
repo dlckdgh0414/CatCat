@@ -10,11 +10,26 @@ public class TrashSpawn : MonoBehaviour
     [SerializeField] private float currentTime;
     [SerializeField] private float creatTime = 4.5f;
 
-    Stack<GameObject> TrashPool = new Stack<GameObject>();
-    Stack<GameObject> BigTrashPool = new Stack<GameObject>();
+   public Stack<GameObject> TrashPool = new Stack<GameObject>();
+   public Stack<GameObject> BigTrashPool = new Stack<GameObject>();
 
-    GameObject TrashObj;
     GameObject BigTrashObj;
+
+    public static TrashSpawn Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+    }
+
 
     private void Start()
     {

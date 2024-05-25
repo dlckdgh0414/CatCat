@@ -37,22 +37,23 @@ public class CatFollow : MonoBehaviour
         if (collision.gameObject.CompareTag("Fish"))
         {
             FishManager.Instance.FishPool.Push(collision.gameObject);
+            LeftManager.Intacne.FishPool.Push(collision.gameObject);
             collision.gameObject.SetActive(false);
             G.x += 0.05f;
         }
         else if (collision.gameObject.CompareTag("Trash"))
         {
-            Destroy(collision.gameObject);
+            TrashSpawn.Instance.TrashPool.Push(collision.gameObject);
             G.trashx += 0.05f;
         }
         else if(collision.gameObject.CompareTag("GoldFish"))
         {
-            Destroy(collision.gameObject);
+            FishManager.Instance.GoldFishPool.Push(collision.gameObject);
             G.x += 0.2f;
         }
         else if(collision.gameObject.CompareTag("BigTrash"))
         {
-            Destroy(collision.gameObject);
+            TrashSpawn.Instance.BigTrashPool.Push(collision.gameObject);
             G.trashx += 0.4f;
         }
     }
