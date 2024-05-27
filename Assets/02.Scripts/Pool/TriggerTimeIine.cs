@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TriggerTimeIine : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class TriggerTimeIine : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-
+            UnityEngine.SceneManagement.SceneManager.LoadScene(4);
         }
     }
 }

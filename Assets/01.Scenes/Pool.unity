@@ -767,6 +767,7 @@ GameObject:
   - component: {fileID: 590577953}
   - component: {fileID: 590577956}
   - component: {fileID: 590577955}
+  - component: {fileID: 590577957}
   m_Layer: 0
   m_Name: Tirgger
   m_TagString: Untagged
@@ -861,6 +862,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8.010247, y: 3.413365}
   m_EdgeRadius: 0
+--- !u!114 &590577957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590577952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c5d001fcf359747a6e525a977a8831, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &677620008
 GameObject:
   m_ObjectHideFlags: 0
