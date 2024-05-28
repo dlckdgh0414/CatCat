@@ -23,10 +23,6 @@ public class TrashSpawn : MonoBehaviour
         {
             Instance = this;
         }
-        else
-        {
-            Destroy(gameObject);
-        }
 
     }
 
