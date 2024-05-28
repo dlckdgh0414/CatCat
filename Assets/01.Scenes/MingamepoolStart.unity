@@ -231,7 +231,7 @@ MonoBehaviour:
   Trash:
   - {fileID: 5443004632715553130, guid: c7e1687f5a5c8804ea9be3771b70e4c7, type: 3}
   - {fileID: 6794488326937744566, guid: 59c2281d657076a4c838ad36d025dc4e, type: 3}
-  BigTrash: {fileID: 0}
+  BigTrash: {fileID: 4885156574655336315, guid: 247d55e40163f874788ce562c4890dac, type: 3}
   BigTrashSpawnRange: 0
   currentTime: 0
   creatTime: 4.5
