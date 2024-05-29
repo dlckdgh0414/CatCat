@@ -19,11 +19,23 @@ public class UIManager : MonoBehaviour
         }
         Instance = this;
     }
+
+    private void Start()
+    {
+        Playerpos = GameObject.Find("Player");
+    }
+
     public void OnClik(int sceneNum)
     {
         Time.timeScale = 1;
         StartCoroutine(delay(3,sceneNum));
         timeLine.Play();
+    }
+    public void YesClik()
+    {
+        Time.timeScale = 1;
+        Playerpos.transform.position = Vector2.zero;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
     public void NoClik()
     {
