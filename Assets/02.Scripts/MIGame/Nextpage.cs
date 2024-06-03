@@ -15,6 +15,11 @@ public class NextPage : MonoBehaviour
             StartCoroutine(Delay());
         }
     }
+
+    public void LetsGoGame()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(5);
+    }
     
     private IEnumerator Delay()
     {
