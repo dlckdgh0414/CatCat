@@ -148,16 +148,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235075733}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 96.78304}
+  m_LocalScale: {x: 0.009259259, y: 0.009259259, z: 0.009259259}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 632577452}
+  m_Father: {fileID: 1997559771}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 193.54, y: 424}
+  m_AnchoredPosition: {x: 2.6698914, y: 1.9943542}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &235075735
@@ -675,7 +675,6 @@ RectTransform:
   - {fileID: 1481491892}
   - {fileID: 1401098019}
   - {fileID: 1084449396}
-  - {fileID: 235075734}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -695,7 +694,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee6051c6f53b4f4798bde3ac1735bf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nextPolltutorial: {fileID: 0}
+  _nextPolltutorial:
+  - {fileID: 1997559770}
 --- !u!1 &657397582
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,8 +895,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.0603, y: 0.3946}
-  m_SizeDelta: {x: 370.1368, y: 54.2967}
+  m_AnchoredPosition: {x: -2.4982, y: 0.3153}
+  m_SizeDelta: {x: 491.5466, y: 71.4186}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &729307209
 MonoBehaviour:
@@ -918,7 +918,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uBB3C\uACE0\uAE30\uAC00 \uC5EC\uAE30\uC11C \uB098\uC635\uB2C8\uB2E4."
+  m_text: "\uBB3C\uACE0\uAE30\uAC00 \uC5EC\uAE30\uC640 \uC624\uB978\uCABD\uC5D0\uB3C4
+    \uC635\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fcf8121fd33402f419956f2e2a340e9e, type: 2}
   m_sharedMaterial: {fileID: -5698742986384185701, guid: fcf8121fd33402f419956f2e2a340e9e, type: 2}
@@ -4633,6 +4634,7 @@ Transform:
   - {fileID: 452092159}
   - {fileID: 729307208}
   - {fileID: 1277589245}
+  - {fileID: 235075734}
   - {fileID: 1794745085}
   m_Father: {fileID: 632577452}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

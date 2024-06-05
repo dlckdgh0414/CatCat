@@ -8,7 +8,7 @@ public class TriggerTimeIine : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(4);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(5);
             collision.gameObject.SetActive(false);
         }
     }
