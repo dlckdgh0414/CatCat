@@ -2,18 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class Guge : MonoBehaviour
 {
-    [SerializeField] RectTransform Size;
-    [SerializeField] RectTransform TrashSize;
-    //[SerializeField] GameObject GameOver;
+    [SerializeField] GameObject GameOver;
+
+
     public  float x = 0f;
     public float trashx = 0f;
+
+    [SerializeField] Image FishGage;
+    [SerializeField] Image TrashGage;
+
     private void Update()
     {
-        Size.localScale = new Vector3(x, 1, 1);
-        TrashSize.localScale = new Vector3(trashx, 1, 1);
+        FishGage.fillAmount = x;
+        TrashGage.fillAmount = trashx;
         MaxGage();
     }
     private void MaxGage()
@@ -22,5 +27,12 @@ public class Guge : MonoBehaviour
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene(6);
         }
+
+        if(trashx >= 1)
+        {
+            GameOver.SetActive(true);
+        }
     }
+
+   
 }

@@ -13,7 +13,8 @@ public class GameOver : MonoBehaviour
     }
     public void Restart()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
-        gameObject.SetActive(false);
+        Time.timeScale = 1;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        Debug.Log("ts" + Time.timeScale);
     }
 }
