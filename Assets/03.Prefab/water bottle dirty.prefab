@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8724084673120163134}
   - component: {fileID: 9187285541646433901}
-  - component: {fileID: 3710693093463939310}
   - component: {fileID: -6568943968376708877}
   - component: {fileID: -2711048184868470837}
+  - component: {fileID: -4752473656730100225}
   m_Layer: 7
   m_Name: water bottle dirty
   m_TagString: Trash
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 784664803
+  m_SortingLayer: 4
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 29b3b27da54e7dd46915c9b6258ea76e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -87,18 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3710693093463939310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6891469725185331027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b482bc431950814e9c2223593dd38a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &-6568943968376708877
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -171,3 +159,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-4752473656730100225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6891469725185331027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6d87bd0dbae3a446a711e360d111f82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

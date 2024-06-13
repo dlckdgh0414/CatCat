@@ -20,10 +20,6 @@ public class FishManager : MonoBehaviour
         {
             Instance = this;
         }
-        else
-        {
-            Destroy(gameObject);
-        }
             
     }
 

@@ -9,6 +9,7 @@ TagManager:
   - Trash
   - GoldFish
   - BigTrash
+  - Final
   layers:
   - Default
   - TransparentFX
@@ -18,9 +19,9 @@ TagManager:
   - UI
   - Fish
   - Trash
-  - OldMan
+  - Object
   - BigTrash
-  - Singe
+  - 
   - 
   - 
   - 
@@ -45,6 +46,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Fish
+    uniqueID: 784664803
     locked: 0
   - name: Agent
     uniqueID: 1823001919
