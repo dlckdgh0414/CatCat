@@ -8,6 +8,7 @@ public class CatFollow : MonoBehaviour
 
     private BoxCollider2D Box;
     [SerializeField] GameObject CatFoot;
+    private bool isStun;
 
     private void Awake()
     {
@@ -22,13 +23,14 @@ public class CatFollow : MonoBehaviour
     }
     private void GetMOuseClike()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && !isStun)
         {
             CatFoot.transform.DOMove(new Vector3(0.35f, 5.57f, 0), 0.5f);
         }
         else if (Input.GetMouseButtonUp(0))
         {
-            CatFoot.transform.DOMove(new Vector3(0.35f, 2.14f, 0), 0.5f);
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            CatFoot.transform.DOMove(new Vector3(0.35f, mousePos.y , 0), 0.5f);
         }
     }
 
@@ -45,19 +47,19 @@ public class CatFollow : MonoBehaviour
         {
             TrashSpawn.Instance.TrashPool.Push(collision.gameObject);
             collision.gameObject.SetActive(false);
-            G.trashx += 0.05f;
+            G.x -= 0.03f;
         }
         else if(collision.gameObject.CompareTag("GoldFish"))
         {
             FishManager.Instance.GoldFishPool.Push(collision.gameObject);
             collision.gameObject.SetActive(false);
-            G.x += 0.2f;
+            G.x += 0.4f;
         }
         else if(collision.gameObject.CompareTag("BigTrash"))
         {
             TrashSpawn.Instance.BigTrashPool.Push(collision.gameObject);
             collision.gameObject.SetActive(false);
-            G.trashx += 0.4f;
+            G.trashx -= 0.3f;
         }
     }
 }
