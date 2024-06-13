@@ -25,7 +25,7 @@ public class Guge : MonoBehaviour
     {
         if(x >= 1)
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(6);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(7);
         }
 
         if(trashx >= 1)
