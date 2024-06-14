@@ -6,7 +6,7 @@ using DG.Tweening;
 public class RightFish : MonoBehaviour
 {
     Rigidbody2D rigid;
-    float Speed =1f;
+    float Speed = 1f;
     Transform final;
     private void Awake()
     {

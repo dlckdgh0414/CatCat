@@ -12,14 +12,14 @@ GameObject:
   - component: {fileID: 3239174978878930569}
   - component: {fileID: -5509403700982513552}
   - component: {fileID: -7590751391316681044}
-  - component: {fileID: -315465317552062393}
+  - component: {fileID: -8629465846650064992}
   m_Layer: 9
   m_Name: garbage bag 1
   m_TagString: BigTrash
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &194802003628645594
 Transform:
   m_ObjectHideFlags: 0
@@ -73,9 +73,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 784664803
-  m_SortingLayer: 4
-  m_SortingOrder: 2
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: cd3a341680b77d54696f34c183d7c82e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -149,7 +149,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-315465317552062393
+--- !u!114 &-8629465846650064992
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1906611491918964434}
   - component: {fileID: -8316170218240034180}
   - component: {fileID: -2019668506670278818}
+  - component: {fileID: 5205553870332980619}
   m_Layer: 6
   m_Name: Fish_10
   m_TagString: Fish
@@ -73,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 784664803
-  m_SortingLayer: 4
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: -280773588, guid: b92a8e3ae9da25744acfa337f2831d48, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -171,3 +172,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.15558457, y: 0.09224036}
   m_EdgeRadius: 0
+--- !u!114 &5205553870332980619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325814775267664863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6d87bd0dbae3a446a711e360d111f82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

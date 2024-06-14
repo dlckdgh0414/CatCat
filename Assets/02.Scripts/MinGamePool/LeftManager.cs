@@ -18,6 +18,10 @@ public class LeftManager : MonoBehaviour
         {
             Intacne = this;
         }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Start()

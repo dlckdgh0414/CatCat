@@ -35,13 +35,8 @@ public class Raycast : MonoBehaviour
     }
     private void CheackHuman()
     {
-        RaycastHit2D raayHit = Physics2D.Raycast(transform.position, Vector3.right , ray, whatisHuman);
-        RaycastHit2D rayHit = Physics2D.Raycast(transform.position, Vector3.left, ray, whatisHuman);
-    }
-
-    private void FixedUpdate()
-    {
-       
+        isHuman = Physics2D.Raycast(transform.position, Vector3.right , ray, whatisHuman); 
+        isHuman = Physics2D.Raycast(transform.position, Vector3.left, ray, whatisHuman);
     }
 
     private void gizmo()

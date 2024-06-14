@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6978722218348523589}
   - component: {fileID: 6280622550165145298}
   - component: {fileID: 1209457450293305524}
-  - component: {fileID: 2062933971852187670}
+  - component: {fileID: -6168519259532064271}
   m_Layer: 7
   m_Name: water bottle crumpled
   m_TagString: Trash
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 784664803
-  m_SortingLayer: 4
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 0c0e422466d28a04597b3f62d5af0823, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -159,7 +159,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2062933971852187670
+--- !u!114 &-6168519259532064271
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
