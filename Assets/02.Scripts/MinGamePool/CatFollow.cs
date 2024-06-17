@@ -14,7 +14,6 @@ public class CatFollow : MonoBehaviour
     {
         G = FindObjectOfType<Guge>();
         Box = GetComponent<BoxCollider2D>();
-
     }
 
     private void Update()
@@ -23,14 +22,17 @@ public class CatFollow : MonoBehaviour
     }
     private void GetMOuseClike()
     {
-        if (Input.GetMouseButton(0) && !isStun)
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        CatFoot.transform.DORotate(new Vector3(5.27f, 0,135.33f + mousePos.z), 0.5f);
+        if (Input.GetMouseButton(0))
         {
-            CatFoot.transform.DOMove(new Vector3(0.35f, 5.57f, 0), 0.5f);
+            CatFoot.transform.DORotate(new Vector3(5.27f, 0, 135.33f + mousePos.z), 0.5f);
+            CatFoot.transform.DOMove(new Vector3(0.35f, 5.57f,0), 0.5f);
         }
         else if (Input.GetMouseButtonUp(0))
         {
-            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            CatFoot.transform.DOMove(new Vector3(0.35f, mousePos.y, 0), 0.5f);
+            
+            CatFoot.transform.DOMove(new Vector3(0.35f,mousePos.y, 0), 0.5f);
         }
     }
 

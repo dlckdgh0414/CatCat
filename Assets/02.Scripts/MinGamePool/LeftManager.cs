@@ -33,15 +33,15 @@ public class LeftManager : MonoBehaviour
     }
     private void Update()
     {
-        if(creatTime<currentTime)
+        if (creatTime < currentTime)
         {
             creatTime = Random.Range(2f, 5f);
             int FishIdex = Random.Range(0, FishPrefab.Length);
             GameObject FishObj;
-            if(FishPool.Count>0)
+            if (FishPool.Count > 0)
             {
-              FishObj = FishPool.Pop();
-              FishObj.SetActive(true);
+                FishObj = FishPool.Pop();
+                FishObj.SetActive(true);
             }
             else
             {
@@ -51,6 +51,7 @@ public class LeftManager : MonoBehaviour
             currentTime = 0;
         }
     }
+
     public void CreatFishs(int n)
     {
         for (int i = 0; i < 3; i++)
