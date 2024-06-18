@@ -6145,8 +6145,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1823001919
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 1741575186, guid: 43bfa2b184972d548a99ff0ee9ab7a9f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6341,6 +6341,7 @@ GameObject:
   - component: {fileID: 304792314}
   - component: {fileID: 304792313}
   - component: {fileID: 304792317}
+  - component: {fileID: 304792318}
   m_Layer: 5
   m_Name: TextUI
   m_TagString: Untagged
@@ -6447,6 +6448,18 @@ MonoBehaviour:
   talkText: {fileID: 878770756}
   scanObject: {fileID: 0}
   talkIndex: 0
+--- !u!114 &304792318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304792312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cb79e499d8461547b31a13fd734a29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &306285792
 GameObject:
   m_ObjectHideFlags: 0
@@ -6457,6 +6470,8 @@ GameObject:
   m_Component:
   - component: {fileID: 306285794}
   - component: {fileID: 306285793}
+  - component: {fileID: 306285795}
+  - component: {fileID: 306285796}
   m_Layer: 0
   m_Name: TalkManager
   m_TagString: Untagged
@@ -6476,6 +6491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cbe853fb5fc9944a970f87e80f37346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textDataListSO: {fileID: 11400000, guid: aedf47890aa46fa4485c62f39ec8f40d, type: 2}
 --- !u!4 &306285794
 Transform:
   m_ObjectHideFlags: 0
@@ -6491,6 +6507,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &306285795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306285792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cb79e499d8461547b31a13fd734a29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &306285796
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306285792}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5e2a763c87f61b740904e092f9285264, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &330820430
 GameObject:
   m_ObjectHideFlags: 0
@@ -8394,7 +8443,7 @@ GameObject:
   - component: {fileID: 1172749963}
   - component: {fileID: 1172749962}
   m_Layer: 10
-  m_Name: Square
+  m_Name: FImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27059,7 +27108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd5081c1b13b28b4c91c47621f4b6e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 100
+  Id: 3
   IsNPC: 0
 --- !u!1 &1581287768
 GameObject:

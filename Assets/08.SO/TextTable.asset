@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab033c89758c2ba4abb9c46a2f2ee68d, type: 3}
+  m_Name: TextTable
+  m_EditorClassIdentifier: 
+  list:
+  - {fileID: 11400000, guid: 800b472ef9d41de41ac08fe2dd3ab954, type: 2}
+  - {fileID: 11400000, guid: 1bc5b90d9167b2f46833135d0b5c47ec, type: 2}
+  - {fileID: 11400000, guid: 55773d897aa2e8b459196a3857e3f294, type: 2}
+  - {fileID: 11400000, guid: d38db17c981c1544abd69428a4de4eab, type: 2}
+  - {fileID: 11400000, guid: e8d3518e5e7da1243a1ea1dec5b2c159, type: 2}

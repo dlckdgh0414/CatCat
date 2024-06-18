@@ -24,16 +24,16 @@ public class CatFollow : MonoBehaviour
     private void GetMOuseClike()
     {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        desiredAngle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(desiredAngle, Vector3.forward);
+        desiredAngle = Mathf.Atan2(mousePos.x, mousePos.y) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(-desiredAngle, Vector3.forward);
         if (Input.GetMouseButton(0))
         {
-            CatFoot.transform.DOMove(new Vector3(0.35f, 5.57f,0), 0.5f);
+            CatFoot.transform.DOMove(new Vector3(mousePos.x, mousePos.y,0), 0.5f);
         }
         else if (Input.GetMouseButtonUp(0))
         {
             
-            CatFoot.transform.DOMove(new Vector3(0.35f, mousePos.y, 0), 0.5f);
+            CatFoot.transform.DOMove(new Vector3(0.35f, 5.57f, 0), 0.5f);
         }
     }
 

@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class Raycast : MonoBehaviour
@@ -27,23 +23,23 @@ public class Raycast : MonoBehaviour
     private void Update()
     {
         CheackHuman();
-        if(isHuman)
-        {
-            _take.SetActive(true);
-        }
-        else if(!isHuman)
-        {
-            _take.SetActive(false);
-        }
 
-        if(Input.GetKeyDown(KeyCode.F) && scanObject != null)
+        if(Input.GetKeyDown(KeyCode.F))
         {
             taxtUi.SetActive(true);
             TextManager.Intance.ScanObj?.Invoke(scanObject);
         }
-        else if(scanObject == null || Input.GetKeyDown(KeyCode.F))
+        else if(!TextManager.Intance.IsTalking && Input.GetKeyDown(KeyCode.F))
         {
             taxtUi.SetActive(false);
+        }
+        if (isHuman)
+        {
+            _take.SetActive(true);
+        }
+        else if (!isHuman)
+        {
+            _take.SetActive(false);
         }
     }
     private void CheackHuman()

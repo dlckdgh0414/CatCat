@@ -12,6 +12,7 @@ public class TextManager : MonoBehaviour
     [SerializeField] private GameObject scanObject;
     public Action<GameObject> ScanObj;
     public int talkIndex;
+    public bool IsTalking { get; private set; }
 
     public static TextManager Intance;
 
@@ -20,10 +21,6 @@ public class TextManager : MonoBehaviour
         if(Intance == null)
         {
             Intance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
         }
         gameObject.SetActive(false);
     }
@@ -40,6 +37,7 @@ public class TextManager : MonoBehaviour
 
     public void ScanObjcetPlayer(GameObject scanObj)
     {
+        IsTalking = true;
         scanObject = scanObj;
         ObjData objData = scanObject.GetComponent<ObjData>();
         Talk(objData.Id, objData.IsNPC);
@@ -48,10 +46,13 @@ public class TextManager : MonoBehaviour
     private void Talk(int id, bool isNPc)
     {
        string talkData = talkManager.GetTalk(id, talkIndex);
-        if(talkData == null)
+        Debug.Log(talkData);
+        if(talkData == "NULL")
         {
-            ScanObj -= ScanObjcetPlayer;
+            Debug.Log("aaaa");
+            IsTalking = false;
             talkIndex = 0;
+            ScanObj -= ScanObjcetPlayer;
             return;
         }
         if(isNPc)
