@@ -9,6 +9,7 @@ TagManager:
   - Trash
   - GoldFish
   - BigTrash
+  - Final
   layers:
   - Default
   - TransparentFX
@@ -18,9 +19,9 @@ TagManager:
   - UI
   - Fish
   - Trash
-  - OldMan
+  - Object
   - BigTrash
-  - Singe
+  - 
   - 
   - 
   - 

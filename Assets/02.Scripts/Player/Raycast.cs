@@ -11,6 +11,7 @@ public class Raycast : MonoBehaviour
     private float ray = 0.7f;
     private Vector2 _size = new Vector2(1f, 1f);
     [SerializeField] private GameObject _take;
+    [SerializeField] private GameObject taxtUi;
     private GameObject scanObject;
 
     private void Start()
@@ -37,7 +38,12 @@ public class Raycast : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.F) && scanObject != null)
         {
-            Debug.Log("This is :" + scanObject.name);
+            taxtUi.SetActive(true);
+            TextManager.Intance.ScanObj?.Invoke(scanObject);
+        }
+        else if(scanObject == null || Input.GetKeyDown(KeyCode.F))
+        {
+            taxtUi.SetActive(false);
         }
     }
     private void CheackHuman()

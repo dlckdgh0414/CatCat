@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using System;
 
 public class RightFish : MonoBehaviour
 {
     Rigidbody2D rigid;
     float Speed = 1f;
     Transform final;
+
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -16,7 +18,15 @@ public class RightFish : MonoBehaviour
 
     private void Start()
     {
-        transform.DOMove(final.position, Speed).SetEase(Ease.Linear);
+        Sequence sequence = DOTween.Sequence();
+        sequence.Append(transform.DOMove(final.position, Speed).SetEase(Ease.Linear));
+        sequence.AppendCallback(IntoPool);
+    }
+
+    private void IntoPool()
+    {
+        FishManager.Instance.FishPool.Push(gameObject);
+        gameObject.SetActive(false);
     }
 
     private void Update()
