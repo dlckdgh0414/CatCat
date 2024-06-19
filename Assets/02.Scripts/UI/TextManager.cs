@@ -7,66 +7,47 @@ using System;
 
 public class TextManager : MonoBehaviour
 {
-    [SerializeField] TalkManager talkManager;
-    [SerializeField] private TextMeshProUGUI talkText;
-    [SerializeField] private GameObject scanObject;
-    private Animator talkPanal;
-    public Action<GameObject> ScanObj;
+    public TalkManager talkManager;
+    public GameObject talkPanel;
+    public Text TalkText;
+    public GameObject scanObject;
+    public bool isAction;
+
     public int talkIndex;
-    public bool IsTalking { get; private set; }
 
-    public static TextManager Intance;
-
-    private void Awake()
+    public void Action(GameObject getObjcet)
     {
-        if(Intance == null)
-        {
-            Intance = this;
-        }
-        gameObject.SetActive(false);
-    }
 
-    private void OnEnable()
-    {
-        ScanObj += ScanObjcetPlayer;
-    }
+        scanObject = getObjcet;
 
-    private void OnDisable()
-    {
-        ScanObj -= ScanObjcetPlayer;
-    }
-
-    public void ScanObjcetPlayer(GameObject scanObj)
-    {
-        IsTalking = true;
-        scanObject = scanObj;
         ObjData objData = scanObject.GetComponent<ObjData>();
-        Talk(objData.Id, objData.IsNPC);
+        Talk(objData.id, objData.isNPC);
 
-        talkPanal.SetBool("isShow", IsTalking);
+        talkPanel.SetActive(isAction);   // isAction == false , 조사 Ul 창 닫겠다.
     }
 
-    private void Talk(int id, bool isNPc)
+    void Talk(int id, bool isNPC)
     {
-       string talkData = talkManager.GetTalk(id, talkIndex);
-        Debug.Log(talkData);
-        if(talkData == "NULL")
+        string talkData = talkManager.GetTalk(id, talkIndex);
+
+        if (talkData == null)
         {
-            Debug.Log("aaaa");
-            IsTalking = false;
-            talkIndex = 0;
-            ScanObj -= ScanObjcetPlayer;
-            return;
+            isAction = false;
+            talkIndex = 0; //대화가 끝날 때 0으로 초기화 , 다른 사물하고도 계속 대화를 진행 하기 위함.
+            return;  // 끝 , void 함수에서 return은 강제 종료 역할.
         }
-        if(isNPc)
+
+        if (isNPC)
         {
-            talkText.text = talkData;
+            TalkText.text = talkData;
         }
+
         else
         {
-            talkText.text = talkData;
+            TalkText.text = talkData;
         }
 
+        isAction = true;
         talkIndex++;
     }
 }

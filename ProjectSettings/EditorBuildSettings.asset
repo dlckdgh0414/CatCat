@@ -21,12 +21,12 @@ EditorBuildSettings:
     path: Assets/01.Scenes/MingamePool.unity
     guid: 4c506219cbaad4d419f12a833596fd75
   - enabled: 1
-    path: Assets/01.Scenes/Poolltutorial.unity
-    guid: c6d395c27b1d8844d91e6d4d4fa478e5
-  - enabled: 1
     path: Assets/01.Scenes/MingamepoolStart.unity
     guid: 234f01a688801284e82ba1854885cd03
   - enabled: 1
     path: Assets/01.Scenes/CutScenes.unity
     guid: 4d167f8e15c65ee4f8b88ead6002eccb
+  - enabled: 1
+    path: Assets/01.Scenes/City.unity
+    guid: 7d88e84be94b06746994dc144132fc52
   m_configObjects: {}

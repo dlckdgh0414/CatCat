@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class ObjData : MonoBehaviour
 {
-    public int Id;
-    public bool IsNPC;
+    public int id;
+    public bool isNPC;
+
+    public static ObjData instance;
+
+
+    private void Awake()
+    {
+        instance = this;
+    }
 }

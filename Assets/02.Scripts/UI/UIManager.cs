@@ -13,11 +13,10 @@ public class UIManager : MonoBehaviour
     private void Awake()
     {
         gameObject.SetActive(false);
-        if (Instance != null)
+        if (Instance == null)
         {
-            Destroy(gameObject);
+            Instance = this;
         }
-        Instance = this;
     }
 
     private void Start()
@@ -31,11 +30,11 @@ public class UIManager : MonoBehaviour
         StartCoroutine(delay(3,sceneNum));
         timeLine.Play();
     }
-    public void YesClik()
+    public void YesClik(int sceneNum)
     {
         Time.timeScale = 1;
         Playerpos.transform.position = Vector2.zero;
-        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneNum);
     }
     public void NoClik()
     {

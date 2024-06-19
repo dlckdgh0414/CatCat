@@ -14,7 +14,7 @@ public class Raycast : MonoBehaviour
     {
         _take.SetActive(false);
     }
-     
+
     private void OnDrawGizmos()
     {
         gizmo();
@@ -24,12 +24,12 @@ public class Raycast : MonoBehaviour
     {
         CheackHuman();
 
-        if(Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             taxtUi.SetActive(true);
-            TextManager.Intance.ScanObj?.Invoke(scanObject);
+
         }
-        else if(!TextManager.Intance.IsTalking && Input.GetKeyDown(KeyCode.F))
+        else if (scanObject == null && Input.GetKeyDown(KeyCode.F))
         {
             taxtUi.SetActive(false);
         }

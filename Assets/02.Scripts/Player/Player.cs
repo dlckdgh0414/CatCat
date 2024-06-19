@@ -12,6 +12,10 @@ public class Player : MonoBehaviour
         {
             Instance = this;
         }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
     private void OnEnable()
     {
