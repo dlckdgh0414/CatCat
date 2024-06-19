@@ -7,13 +7,18 @@ using UnityEngine.UI;
 
 public class SceneManager : MonoBehaviour
 {
-    private void Awake()
-    {
-        Debug.Log(Time.timeScale+"ddddd");
-
-    }
     public void next()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
+
+    public void Setting()
+    {
+
     }
 }

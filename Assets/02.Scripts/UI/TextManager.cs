@@ -10,6 +10,7 @@ public class TextManager : MonoBehaviour
     [SerializeField] TalkManager talkManager;
     [SerializeField] private TextMeshProUGUI talkText;
     [SerializeField] private GameObject scanObject;
+    private Animator talkPanal;
     public Action<GameObject> ScanObj;
     public int talkIndex;
     public bool IsTalking { get; private set; }
@@ -41,6 +42,8 @@ public class TextManager : MonoBehaviour
         scanObject = scanObj;
         ObjData objData = scanObject.GetComponent<ObjData>();
         Talk(objData.Id, objData.IsNPC);
+
+        talkPanal.SetBool("isShow", IsTalking);
     }
 
     private void Talk(int id, bool isNPc)
