@@ -5930,6 +5930,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 279745111}
+  - component: {fileID: 279745112}
   m_Layer: 0
   m_Name: TextManager
   m_TagString: Untagged
@@ -5952,6 +5953,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &279745112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279745110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0db2a358b224aa84fb4ade99fce67ce0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  talkManager: {fileID: 0}
+  talkPanel: {fileID: 793795937}
+  TalkText: {fileID: 1434383100}
+  scanObject: {fileID: 0}
+  isAction: 0
+  talkIndex: 0
 --- !u!1 &280857374
 GameObject:
   m_ObjectHideFlags: 0
@@ -6297,6 +6316,7 @@ MonoBehaviour:
   whatisHuman:
     serializedVersion: 2
     m_Bits: 256
+  manager: {fileID: 279745112}
   _take: {fileID: 0}
   taxtUi: {fileID: 0}
 --- !u!1 &330820430
@@ -7119,7 +7139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 616193311}
   - component: {fileID: 616193312}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 8e93a7ee5d71bce8f5e20b737ae15d04-removebg-preview (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7359,6 +7379,103 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &738046674
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 738046675}
+  - component: {fileID: 738046678}
+  - component: {fileID: 738046677}
+  - component: {fileID: 738046676}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &738046675
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738046674}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 793795941}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -50, y: 50}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &738046676
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738046674}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c14097b7a4763d849aba84c90af06935, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &738046677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738046674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -4296635770777405670, guid: 1c9bc0d104c01934da10d4333b9dc48b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &738046678
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738046674}
+  m_CullTransparentMesh: 1
 --- !u!1 &793795937
 GameObject:
   m_ObjectHideFlags: 0
@@ -7454,6 +7571,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1663016537}
+  - {fileID: 738046675}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -7520,7 +7638,7 @@ GameObject:
   m_Component:
   - component: {fileID: 848061957}
   - component: {fileID: 848061958}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Beatch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7604,7 +7722,7 @@ GameObject:
   m_Component:
   - component: {fileID: 856418228}
   - component: {fileID: 856418229}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 8e93a7ee5d71bce8f5e20b737ae15d04-removebg-preview (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7975,7 +8093,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1169104482}
   - component: {fileID: 1169104483}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 8e93a7ee5d71bce8f5e20b737ae15d04-removebg-preview (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26352,10 +26470,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1663016537}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4, y: 0.60240173}
-  m_SizeDelta: {x: 1872, y: 126.1987}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 17.5, y: 0}
+  m_SizeDelta: {x: -35, y: 126.1987}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1434383100
 MonoBehaviour:
@@ -26907,7 +27025,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1609724821}
   - component: {fileID: 1609724822}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 8e93a7ee5d71bce8f5e20b737ae15d04-removebg-preview (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26991,7 +27109,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1648570480}
   - component: {fileID: 1648570481}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Beatch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27202,7 +27320,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 20}
-  m_SizeDelta: {x: -40, y: 100}
+  m_SizeDelta: {x: -40, y: 80}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1663016538
 MonoBehaviour:
@@ -27320,7 +27438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1765437594}
   - component: {fileID: 1765437595}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 8e93a7ee5d71bce8f5e20b737ae15d04-removebg-preview (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27831,7 +27949,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1924431606}
   - component: {fileID: 1924431607}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 8e93a7ee5d71bce8f5e20b737ae15d04-removebg-preview (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

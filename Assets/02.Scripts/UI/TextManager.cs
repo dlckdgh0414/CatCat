@@ -9,7 +9,7 @@ public class TextManager : MonoBehaviour
 {
     public TalkManager talkManager;
     public GameObject talkPanel;
-    public Text TalkText;
+    public TextMeshProUGUI TalkText;
     public GameObject scanObject;
     public bool isAction;
 
@@ -17,11 +17,23 @@ public class TextManager : MonoBehaviour
 
     public void Action(GameObject getObjcet)
     {
+        if (isAction)
+        {
+            isAction = false;
+            talkPanel.SetActive(false);
+        }
+        else
+        {
 
-        scanObject = getObjcet;
+            isAction = true;
+            scanObject = getObjcet;
+            TalkText.text = "이것의 이름은 " + scanObject.name + " 이라고 한다";
+        }
+        talkPanel.SetActive(isAction);
 
         ObjData objData = scanObject.GetComponent<ObjData>();
         Talk(objData.id, objData.isNPC);
+
 
         talkPanel.SetActive(isAction);   // isAction == false , 조사 Ul 창 닫겠다.
     }

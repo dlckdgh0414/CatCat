@@ -5,6 +5,7 @@ public class Raycast : MonoBehaviour
     private bool isHuman = false;
     [SerializeField] private LayerMask whatisHuman;
     private float ray = 0.7f;
+    public TextManager manager;
     private Vector2 _size = new Vector2(1f, 1f);
     [SerializeField] private GameObject _take;
     [SerializeField] private GameObject taxtUi;
@@ -26,12 +27,9 @@ public class Raycast : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.F))
         {
+            manager.Action(scanObject);
             taxtUi.SetActive(true);
 
-        }
-        else if (scanObject == null && Input.GetKeyDown(KeyCode.F))
-        {
-            taxtUi.SetActive(false);
         }
         if (isHuman)
         {
