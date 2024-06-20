@@ -30,7 +30,7 @@ public class TextManager : MonoBehaviour
         else
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
-        Choose.SetActive(true)
+        Choose.SetActive(true);
     }
 
     public int talkIndex;
