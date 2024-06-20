@@ -1,20 +1,19 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
 public class TextEffect : MonoBehaviour
 {
-    [SerializeField] private string _targetMsg;
-    [SerializeField] private int CharPerSceonds;
+     private string _targetMsg;
+    public int CharPerSceonds;
     [SerializeField] GameObject EndCursor;
-    TextMeshProUGUI _text;
+    [SerializeField] TMP_Text _text;
     int index;
+    float interval;
 
     private void Awake()
     {
-        _text = GetComponent<TextMeshProUGUI>();
+        //_text = GetComponent<TMP_Text>();
     }
 
     public void SetMsg(string msg)
@@ -28,19 +27,23 @@ public class TextEffect : MonoBehaviour
         _text.text = "";
         index = 0;
         EndCursor.SetActive(false);
-
-        Invoke("Effecting", 1/ CharPerSceonds);
+        interval = 0.05f;
+        TextManager.Intance.TalkPanel.SetActive(true);
+        StartCoroutine(Effecting());
     } 
-    private void Effecting()
+    private IEnumerator Effecting()
     {
-        if(_text.text == _targetMsg)
+        while (true)
         {
-            EffectEnd();
-            return;
+            if (_text.text == _targetMsg)
+            {
+                EffectEnd();
+                yield break;
+            }
+            _text.text += _targetMsg[index];
+            index++;
+            yield return new WaitForSeconds(interval);
         }
-        _text.text += _targetMsg[index];
-        index++;
-        Invoke("Effectiong", 1 / CharPerSceonds);
     } 
     private void EffectEnd()
     {

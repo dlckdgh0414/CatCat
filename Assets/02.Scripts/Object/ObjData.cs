@@ -9,7 +9,6 @@ public class ObjData : MonoBehaviour
 
     public static ObjData instance;
 
-
     private void Awake()
     {
         instance = this;

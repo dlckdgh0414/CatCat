@@ -12,8 +12,16 @@ public class PlayerMove : MonoBehaviour
     public Vector2 move;
     public bool catMove = true;
     public float x;
+    
+
+   public static PlayerMove Intance;
+
     private void Awake()
     {
+        if(Intance == null)
+        {
+            Intance = this;
+        }
         anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         sprit = GetComponent<SpriteRenderer>();
@@ -24,26 +32,28 @@ public class PlayerMove : MonoBehaviour
     }
     void FixedUpdate()
     {
+        if(!TextManager.Intance.isAction)
+        {
             Move();
+        }
         
     }
 
-    private void Move()
+    public void Move()
     {
         x = Input.GetAxisRaw("Horizontal");
 
         move = new Vector2(x * speed, rigid.velocity.y);
         rigid.velocity = move;
         anim.SetBool(walkHash, move.magnitude > 0);
-        if (move.x > 0)
+
+        if(move.x<0)
         {
-            
-            sprit.flipX = false;
-        }
-        else if (move.x < 0)
-        {
-            
             sprit.flipX = true;
+        }
+        else if(move.x>0)
+        {
+            sprit.flipX = false;
         }
     }
 }

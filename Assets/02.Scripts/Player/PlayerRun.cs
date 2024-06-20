@@ -13,12 +13,12 @@ public class PlayerRub : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !TextManager.Intance.isAction)
         {
             player.speed += 5f;
             anim.SetBool("Run", true);
         }
-        else if (Input.GetKeyUp(KeyCode.LeftShift))
+        else if (Input.GetKeyUp(KeyCode.LeftShift) && !TextManager.Intance.isAction)
         {
             player.speed = 5f;
             anim.SetBool("Run", false);

@@ -7,35 +7,40 @@ using System;
 
 public class TextManager : MonoBehaviour
 {
-    public TalkManager talkManager;
-    public GameObject talkPanel;
-    public TextMeshProUGUI TalkText;
-    public GameObject scanObject;
-    public bool isAction;
+    [SerializeField] TalkManager talkManager;
+    [SerializeField] GameObject talkPanel;
+    [SerializeField] TextEffect TalkEffect;
+    [SerializeField] GameObject scanObject;
+    public bool isAction { get; private set; }
+    public GameObject TalkPanel
+    {
+        get => talkPanel;
+        set => talkPanel = value;
+    }
+
+    public static TextManager Intance;
+    
+    private void Awake()
+    {
+        if (Intance == null)
+        {
+            Intance = this;
+        }
+        else
+            Destroy(gameObject);
+        DontDestroyOnLoad(gameObject);
+    }
 
     public int talkIndex;
 
-    public void Action(GameObject getObjcet)
+    public void Action(GameObject scanObj)
     {
-        if (isAction)
-        {
-            isAction = false;
-            talkPanel.SetActive(false);
-        }
-        else
-        {
-
             isAction = true;
-            scanObject = getObjcet;
-            TalkText.text = "이것의 이름은 " + scanObject.name + " 이라고 한다";
-        }
+            scanObject = scanObj;
+            ObjData objData = scanObject.GetComponent<ObjData>();
+            Talk(objData.id, objData.isNPC);
+        
         talkPanel.SetActive(isAction);
-
-        ObjData objData = scanObject.GetComponent<ObjData>();
-        Talk(objData.id, objData.isNPC);
-
-
-        talkPanel.SetActive(isAction);   // isAction == false , 조사 Ul 창 닫겠다.
     }
 
     void Talk(int id, bool isNPC)
@@ -44,22 +49,26 @@ public class TextManager : MonoBehaviour
 
         if (talkData == null)
         {
-            isAction = false;
             talkIndex = 0; //대화가 끝날 때 0으로 초기화 , 다른 사물하고도 계속 대화를 진행 하기 위함.
+            isAction = false;
             return;  // 끝 , void 함수에서 return은 강제 종료 역할.
         }
 
         if (isNPC)
         {
-            TalkText.text = talkData;
+            TalkEffect.SetMsg(talkData.Split(':')[0]);
         }
 
         else
         {
-            TalkText.text = talkData;
+            TalkEffect.SetMsg(talkData);
         }
-
         isAction = true;
         talkIndex++;
+    }
+
+    private void OnEnable()
+    {
+        
     }
 }

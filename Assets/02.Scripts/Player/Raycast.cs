@@ -5,15 +5,13 @@ public class Raycast : MonoBehaviour
     private bool isHuman = false;
     [SerializeField] private LayerMask whatisHuman;
     private float ray = 0.7f;
-    public TextManager manager;
     private Vector2 _size = new Vector2(1f, 1f);
-    [SerializeField] private GameObject _take;
     [SerializeField] private GameObject taxtUi;
     private GameObject scanObject;
 
-    private void Start()
+    private void Awake()
     {
-        _take.SetActive(false);
+        taxtUi.SetActive(false);
     }
 
     private void OnDrawGizmos()
@@ -25,19 +23,9 @@ public class Raycast : MonoBehaviour
     {
         CheackHuman();
 
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && scanObject != null)
         {
-            manager.Action(scanObject);
-            taxtUi.SetActive(true);
-
-        }
-        if (isHuman)
-        {
-            _take.SetActive(true);
-        }
-        else if (!isHuman)
-        {
-            _take.SetActive(false);
+           TextManager.Intance.Action(scanObject);
         }
     }
     private void CheackHuman()

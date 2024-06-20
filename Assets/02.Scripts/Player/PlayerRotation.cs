@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using System;
 
 public class PlayerDotween : MonoBehaviour
 {
@@ -10,13 +11,15 @@ public class PlayerDotween : MonoBehaviour
     [SerializeField] Transform drawLineObject;
     [SerializeField] GameObject Player;
     Rigidbody2D rigid;
+
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
     }
     private void Update()
     {
-        Ray();
+       
+            Ray();
     }
     private void OnDrawGizmos()
     {

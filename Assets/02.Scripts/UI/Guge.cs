@@ -13,6 +13,7 @@ public class Guge : MonoBehaviour
 
     [SerializeField] Image FishGage;
 
+
     private void Update()
     {
         FishGage.fillAmount = x;
@@ -23,7 +24,7 @@ public class Guge : MonoBehaviour
         if(x >= 1)
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene(6);
-            GameObject.FindWithTag("Player").SetActive(true);
+            GameManager.Instance.Player.SetActive(true);
         }
     }
 
