@@ -26,7 +26,9 @@ public class TalkManager : MonoBehaviour
     private void GenerateData()
     {
         talkData.Add(0, new string[] { "낡은 벤치다" });
-        talkData.Add(1, new string[] { "엄청 큰 돌이다.","이쪽으론 지나갈 순 없을 거 같다." });
+        talkData.Add(1, new string[] { "엄청 큰 돌이다.","이쪽으론 지나갈 순 없을 거 같다.","아쉽다 ㅋ" });
+        talkData.Add(2, new string[] { "고양이가 맛있게 먹고 남긴 뼈 조각이다.", "고양이는 배가 부른거같다.", "이제 어디로 갈까?" });
+        talkData.Add(3, new string[] { "고양이는 지금 배가 매우 고픈거같다.","연못가에 물고기가 많은거같다.","우리가 고양이를 위해 물고기를 잡아줄까요?" });
     }
 
 

@@ -6,7 +6,7 @@ public class ObjData : MonoBehaviour
 {
     public int id;
     public bool isNPC;
-
+    public bool isChoose;
     public static ObjData instance;
 
     private void Awake()

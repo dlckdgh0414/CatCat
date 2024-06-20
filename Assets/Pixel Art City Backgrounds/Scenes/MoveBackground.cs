@@ -23,7 +23,7 @@ public class MoveBackground : MonoBehaviour {
 	void Update () {
 
 
-		x = transform.position.x;
+		x = PlayerMove.Intance.move.x;
 		x += speed * Time.deltaTime;
 		transform.position = new Vector3 (x, transform.position.y, transform.position.z);
 

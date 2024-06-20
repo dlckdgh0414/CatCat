@@ -55,13 +55,13 @@ public class CatFollow : MonoBehaviour
             FishManager.Instance.FishPool.Push(collision.gameObject);
             LeftManager.Intacne.FishPool.Push(collision.gameObject);
             collision.gameObject.SetActive(false);
-            G.x += 0.05f;
+            G.x += 0.08f;
         }
         else if (collision.gameObject.CompareTag("Trash"))
         {
             TrashSpawn.Instance.TrashPool.Push(collision.gameObject);
             collision.gameObject.SetActive(false);
-            G.x -= 0.03f;
+            G.x -= 0.04f;
         }
         else if (collision.gameObject.CompareTag("GoldFish"))
         {

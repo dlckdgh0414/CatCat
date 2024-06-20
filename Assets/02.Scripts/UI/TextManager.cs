@@ -11,6 +11,7 @@ public class TextManager : MonoBehaviour
     [SerializeField] GameObject talkPanel;
     [SerializeField] TextEffect TalkEffect;
     [SerializeField] GameObject scanObject;
+    [SerializeField] GameObject Choose;
     public bool isAction { get; private set; }
     public GameObject TalkPanel
     {
@@ -29,6 +30,7 @@ public class TextManager : MonoBehaviour
         else
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
+        Choose.SetActive(true)
     }
 
     public int talkIndex;
@@ -38,12 +40,12 @@ public class TextManager : MonoBehaviour
             isAction = true;
             scanObject = scanObj;
             ObjData objData = scanObject.GetComponent<ObjData>();
-            Talk(objData.id, objData.isNPC);
+            Talk(objData.id, objData.isNPC,objData.isChoose);
         
         talkPanel.SetActive(isAction);
     }
 
-    void Talk(int id, bool isNPC)
+    void Talk(int id, bool isNPC, bool isChoose)
     {
         string talkData = talkManager.GetTalk(id, talkIndex);
 
@@ -52,6 +54,15 @@ public class TextManager : MonoBehaviour
             talkIndex = 0; //대화가 끝날 때 0으로 초기화 , 다른 사물하고도 계속 대화를 진행 하기 위함.
             isAction = false;
             return;  // 끝 , void 함수에서 return은 강제 종료 역할.
+        }
+
+        if(isChoose)
+        {
+            if(talkData == null)
+            {
+
+            }
+                
         }
 
         if (isNPC)
