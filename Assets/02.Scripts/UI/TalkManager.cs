@@ -34,7 +34,7 @@ public class TalkManager : MonoBehaviour
         talkData.Add(6, new string[] { "고양이는 아직 배를 채우지 못했습니다. 그래도 돌아가실 건가요?" });
         talkData.Add(7, new string[] { "다시 돌아가실건가요?" });
         talkData.Add(8, new string[] { "표지판에 도시로 내려가는길이라 써져있다", "도시로 내려가볼까?", "*주의 아직까지 고양이에게 밥을 안줬다면 위험할수도있습니다.", "밥을 줬다면 도시로 내려가볼까요?" });
-        talkData.Add(9, new string[] { "다시 돌아갈까 아니면 산책로로 갈까?", "*다시 돌아가봤자 굳이 할 짓없다..." });
+        talkData.Add(9, new string[] { "배도 채웠으니 이제 산책로로 내려가볼까?"});
     }
 
 

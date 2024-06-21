@@ -25,6 +25,7 @@ public class Guge : MonoBehaviour
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene(6);
             GameManager.Instance.Player.SetActive(true);
+            GameObject.FindGameObjectWithTag("Music2").GetComponent<BackGround2>().PlayMusic();
         }
     }
 

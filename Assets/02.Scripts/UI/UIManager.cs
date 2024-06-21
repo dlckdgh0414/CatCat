@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 
 using UnityEngine;
@@ -32,12 +33,14 @@ public class UIManager : MonoBehaviour
         StartCoroutine(delay(3,sceneNum));
         timeLine.Play();
         _pool = true;
+        GameObject.FindGameObjectWithTag("Music").GetComponent<BackGroundMusic>().StopMusic();
     }
     public void DownOnClik(int sceneNum)
     {
         Time.timeScale = 1;
         StartCoroutine(delay(3,sceneNum));
         timeLine.Play();
+        GameObject.FindGameObjectWithTag("Music").GetComponent<BackGroundMusic>().PlayMusic();
     }
     
     IEnumerator delay(float delayTime, int sceneNum)
@@ -47,6 +50,7 @@ public class UIManager : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneNum);
         TextManager.Intance.isFreeze = true;
         gameObject.SetActive(false);
+        Image.SetActive(false);
 
     }
 }

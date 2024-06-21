@@ -11,6 +11,8 @@ TagManager:
   - BigTrash
   - Final
   - Talk
+  - Music
+  - Music2
   layers:
   - Default
   - TransparentFX

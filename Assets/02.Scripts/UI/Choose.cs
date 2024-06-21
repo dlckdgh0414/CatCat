@@ -10,6 +10,7 @@ public class Choose : MonoBehaviour
         GameObject.FindWithTag("Player").SetActive(false);
         TextManager.Intance.isFreeze = true;
         gameObject.SetActive(false);
+        GameObject.FindGameObjectWithTag("Music2").GetComponent<BackGround2>().StopMusic();
     }
 
     public void NoClik()
