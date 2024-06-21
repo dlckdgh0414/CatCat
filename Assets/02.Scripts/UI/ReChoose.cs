@@ -17,6 +17,7 @@ public class ReChoose : MonoBehaviour
         Playerpos.transform.position = Vector2.zero;
         GameObject.FindGameObjectWithTag("Music2").GetComponent<BackGround2>().StopMusic();
         GameObject.FindGameObjectWithTag("Music").GetComponent<BackGroundMusic>().PlayMusic();
+        gameObject.SetActive(false);
     }
 
     public void DownBottun()

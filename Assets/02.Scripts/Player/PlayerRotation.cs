@@ -6,10 +6,11 @@ using System;
 
 public class PlayerDotween : MonoBehaviour
 {
-    RaycastHit2D Hille;
-    private bool HilleHit=true;
+    private bool isHille;
+    [SerializeField] LayerMask whatIsHille;
     [SerializeField] Transform drawLineObject;
     [SerializeField] GameObject Player;
+    private float _ray = 1;
     Rigidbody2D rigid;
 
     private void Awake()
@@ -18,8 +19,15 @@ public class PlayerDotween : MonoBehaviour
     }
     private void Update()
     {
-       
-            Ray();
+        Ray();
+        if (isHille)
+        {
+            transform.DORotate(new Vector3(0, 0, -30), 0.5f);
+        }
+        else
+        {
+            transform.DORotate(new Vector3(0, 0, 0), 0.5f);
+        }
     }
     private void OnDrawGizmos()
     {
@@ -27,29 +35,7 @@ public class PlayerDotween : MonoBehaviour
     }
     private void Ray()
     {
-        Hille = Physics2D.Raycast(rigid.position, Vector3.down, 3f, 1 << 3);
-        if(HilleHit&&Hille)
-        {
-            if (Hille.collider.gameObject.CompareTag("Buttom"))
-            {
-                HilleHit = false;   
-                StartCoroutine(DelayHit(0.1f));
-                Player.transform.DORotate(new Vector3(0, 0, -30), 1f);
-                rigid.gravityScale = 1.5f;
-
-            }
-            else
-            {
-                HilleHit = false;
-                StartCoroutine(DelayHit(0.01f));
-                Player.transform.DORotate(new Vector3(0, 0, 0), 0.2f);
-            }
-        }
-    }
-    IEnumerator DelayHit(float delayTime)
-    {
-        yield return new WaitForSeconds(delayTime);
-        HilleHit = true;
+        isHille = Physics2D.Raycast(transform.position, Vector2.down, _ray, whatIsHille);
     }
     private void DrawRay()
     {

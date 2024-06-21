@@ -30,27 +30,20 @@ public class UIManager : MonoBehaviour
     public void UpOnClik(int sceneNum)
     {
         Time.timeScale = 1;
-        StartCoroutine(delay(3,sceneNum));
-        timeLine.Play();
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneNum);
+        Playerpos.transform.position = Vector2.zero;
+        TextManager.Intance.isFreeze = true;
+        gameObject.SetActive(false);
         _pool = true;
         GameObject.FindGameObjectWithTag("Music").GetComponent<BackGroundMusic>().StopMusic();
     }
     public void DownOnClik(int sceneNum)
     {
         Time.timeScale = 1;
-        StartCoroutine(delay(3,sceneNum));
-        timeLine.Play();
-        GameObject.FindGameObjectWithTag("Music").GetComponent<BackGroundMusic>().PlayMusic();
-    }
-    
-    IEnumerator delay(float delayTime, int sceneNum)
-    {
-        yield return new WaitForSeconds(delayTime);
-        Playerpos.transform.position = Vector2.zero;
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneNum);
+        Playerpos.transform.position = Vector2.zero;
         TextManager.Intance.isFreeze = true;
         gameObject.SetActive(false);
-        Image.SetActive(false);
-
+        GameObject.FindGameObjectWithTag("Music").GetComponent<BackGroundMusic>().PlayMusic();
     }
 }
