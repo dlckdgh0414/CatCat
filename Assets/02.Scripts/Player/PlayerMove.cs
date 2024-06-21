@@ -32,7 +32,7 @@ public class PlayerMove : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if(!TextManager.Intance.isAction)
+        if(!TextManager.Intance.isAction &&  TextManager.Intance.isFreeze)
         {
             Move();
         }

@@ -12,7 +12,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject Playerpos;
     private void Awake()
     {
-        gameObject.SetActive(false);
         if (Instance == null)
         {
             Instance = this;
@@ -33,12 +32,12 @@ public class UIManager : MonoBehaviour
     public void YesClik(int sceneNum)
     {
         Time.timeScale = 1;
-        Playerpos.transform.position = Vector2.zero;
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneNum);
     }
     public void NoClik()
     {
         gameObject.SetActive(false);
+        TextManager.Intance.isFreeze = true;
         Time.timeScale = 1;
     }
     IEnumerator delay(float delayTime, int sceneNum)
@@ -46,5 +45,7 @@ public class UIManager : MonoBehaviour
         yield return new WaitForSeconds(delayTime);
         Playerpos.transform.position = Vector2.zero;
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneNum);
+        TextManager.Intance.isFreeze = true;
+
     }
 }

@@ -4,20 +4,14 @@ using UnityEngine;
 
 public class Tirgger : MonoBehaviour
 {
-    [SerializeField] GameObject UI;
-    BoxCollider2D box;
-
-    private void Awake()
+    public void YesClik()
     {
-        box = GetComponent<BoxCollider2D>();
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        gameObject.SetActive(false);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void No()
     {
-        if (collision.gameObject.name == "Player")
-        {
-            UI.SetActive(true);
-            Time.timeScale = 0;
-        }
+        gameObject.SetActive(false);
     }
 }

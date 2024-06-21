@@ -11,8 +11,11 @@ public class TextManager : MonoBehaviour
     [SerializeField] GameObject talkPanel;
     [SerializeField] TextEffect TalkEffect;
     [SerializeField] GameObject scanObject;
+    [SerializeField] GameObject ChoosePoolPath;
     [SerializeField] GameObject Choose;
+    [SerializeField] GameObject YesOrNochoose;
     public bool isAction { get; private set; }
+    public bool isFreeze {  get;  set; }
     public GameObject TalkPanel
     {
         get => talkPanel;
@@ -21,7 +24,7 @@ public class TextManager : MonoBehaviour
 
     public static TextManager Intance;
     
-    private void Awake()
+    private void Start()
     {
         if (Intance == null)
         {
@@ -30,7 +33,10 @@ public class TextManager : MonoBehaviour
         else
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
-        Choose.SetActive(true);
+        isFreeze = true;
+        Choose.SetActive(false);
+        ChoosePoolPath.SetActive(false);
+        YesOrNochoose.SetActive(false);
     }
 
     public int talkIndex;
@@ -40,30 +46,38 @@ public class TextManager : MonoBehaviour
             isAction = true;
             scanObject = scanObj;
             ObjData objData = scanObject.GetComponent<ObjData>();
-            Talk(objData.id, objData.isNPC,objData.isChoose);
+            Talk(objData.id, objData.isNPC,objData.isChoose, objData.isPos,objData.isYesNo);
         
         talkPanel.SetActive(isAction);
     }
 
-    void Talk(int id, bool isNPC, bool isChoose)
+    void Talk(int id, bool isNPC, bool isChoose, bool isPos, bool isYesNo)
     {
         string talkData = talkManager.GetTalk(id, talkIndex);
 
         if (talkData == null)
         {
+            if (isChoose)
+            {
+                isFreeze = false;
+                Choose.SetActive(true);
+            }
+            if(isPos)
+            {
+                isFreeze = false;
+                ChoosePoolPath.SetActive(true);
+            }
+            if (isYesNo)
+            {
+                isFreeze = false;
+                YesOrNochoose.SetActive(true);
+            }
+
             talkIndex = 0; //대화가 끝날 때 0으로 초기화 , 다른 사물하고도 계속 대화를 진행 하기 위함.
             isAction = false;
             return;  // 끝 , void 함수에서 return은 강제 종료 역할.
         }
 
-        if(isChoose)
-        {
-            if(talkData == null)
-            {
-
-            }
-                
-        }
 
         if (isNPC)
         {
@@ -76,10 +90,5 @@ public class TextManager : MonoBehaviour
         }
         isAction = true;
         talkIndex++;
-    }
-
-    private void OnEnable()
-    {
-        
     }
 }
