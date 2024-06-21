@@ -14,6 +14,8 @@ public class TextManager : MonoBehaviour
     [SerializeField] GameObject ChoosePoolPath;
     [SerializeField] GameObject Choose;
     [SerializeField] GameObject YesOrNochoose;
+    [SerializeField] GameObject CityUi;
+    [SerializeField] GameObject reChoose;
     public bool isAction { get; private set; }
     public bool isFreeze {  get;  set; }
     public GameObject TalkPanel
@@ -37,6 +39,8 @@ public class TextManager : MonoBehaviour
         Choose.SetActive(false);
         ChoosePoolPath.SetActive(false);
         YesOrNochoose.SetActive(false);
+        CityUi.SetActive(false);
+        reChoose.SetActive(false);
     }
 
     public int talkIndex;
@@ -46,12 +50,12 @@ public class TextManager : MonoBehaviour
             isAction = true;
             scanObject = scanObj;
             ObjData objData = scanObject.GetComponent<ObjData>();
-            Talk(objData.id, objData.isNPC,objData.isChoose, objData.isPos,objData.isYesNo);
+            Talk(objData.id, objData.isNPC,objData.isChoose, objData.isPos,objData.isYesNo,objData.isClity, objData.isReChoose);
         
         talkPanel.SetActive(isAction);
     }
 
-    void Talk(int id, bool isNPC, bool isChoose, bool isPos, bool isYesNo)
+    void Talk(int id, bool isNPC, bool isChoose, bool isPos, bool isYesNo, bool isClity, bool isReChoose)
     {
         string talkData = talkManager.GetTalk(id, talkIndex);
 
@@ -71,6 +75,16 @@ public class TextManager : MonoBehaviour
             {
                 isFreeze = false;
                 YesOrNochoose.SetActive(true);
+            }
+            if(isClity)
+            {
+                isFreeze = false;
+                CityUi.SetActive(true);
+            }  
+            if(isReChoose)
+            {
+                isFreeze = false;
+                reChoose.SetActive(true);
             }
 
             talkIndex = 0; //대화가 끝날 때 0으로 초기화 , 다른 사물하고도 계속 대화를 진행 하기 위함.

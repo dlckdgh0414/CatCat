@@ -5,10 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
+    [SerializeField] GameObject Playerpos;
+
+    private void Awake()
+    {
+        Playerpos = GameObject.Find("Player");
+    }
     public void Restart()
     {
         Time.timeScale = 1;
         UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        Playerpos.transform.position = Vector2.zero;
     }
     
     public void Exit()

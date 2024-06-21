@@ -5,16 +5,28 @@ using UnityEngine;
 public class City : MonoBehaviour
 {
     [SerializeField] GameObject Playerpos;
+    private Tirgger tirgger;
     private void Start()
     {
-        gameObject.SetActive(false);
+        tirgger = GetComponent<Tirgger>();
         Playerpos = GameObject.Find("Player");
     }
     public void YesClik()
     {
-        Time.timeScale = 1;
-        Playerpos.transform.position = Vector2.zero;
-        UnityEngine.SceneManagement.SceneManager.LoadScene(7);
+        if(UIManager.Instance._pool)
+        {
+            Time.timeScale = 1;
+            Playerpos.transform.position = Vector2.zero;
+            UnityEngine.SceneManagement.SceneManager.LoadScene(7);
+            gameObject.SetActive(false);
+            TextManager.Intance.isFreeze = true;
+        }
+        else
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(8);
+            gameObject.SetActive(false);
+            TextManager.Intance.isFreeze = true;
+        }
     }
 
     public void NoClik()

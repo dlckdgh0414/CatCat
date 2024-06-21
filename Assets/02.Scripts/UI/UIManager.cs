@@ -10,8 +10,11 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance;
     public PlayableDirector timeLine;
     [SerializeField] GameObject Playerpos;
+    [SerializeField] GameObject Image;
+    public bool _pool;
     private void Awake()
     {
+        DontDestroyOnLoad(gameObject);
         if (Instance == null)
         {
             Instance = this;
@@ -23,29 +26,27 @@ public class UIManager : MonoBehaviour
         Playerpos = GameObject.Find("Player");
     }
 
-    public void OnClik(int sceneNum)
+    public void UpOnClik(int sceneNum)
+    {
+        Time.timeScale = 1;
+        StartCoroutine(delay(3,sceneNum));
+        timeLine.Play();
+        _pool = true;
+    }
+    public void DownOnClik(int sceneNum)
     {
         Time.timeScale = 1;
         StartCoroutine(delay(3,sceneNum));
         timeLine.Play();
     }
-    public void YesClik(int sceneNum)
-    {
-        Time.timeScale = 1;
-        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneNum);
-    }
-    public void NoClik()
-    {
-        gameObject.SetActive(false);
-        TextManager.Intance.isFreeze = true;
-        Time.timeScale = 1;
-    }
+    
     IEnumerator delay(float delayTime, int sceneNum)
     {
         yield return new WaitForSeconds(delayTime);
         Playerpos.transform.position = Vector2.zero;
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneNum);
         TextManager.Intance.isFreeze = true;
+        gameObject.SetActive(false);
 
     }
 }

@@ -909,6 +909,8 @@ MonoBehaviour:
   isChoose: 1
   isPos: 0
   isYesNo: 0
+  isClity: 0
+  isReChoose: 0
 --- !u!114 &590577958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1043,6 +1045,8 @@ MonoBehaviour:
   isChoose: 0
   isPos: 0
   isYesNo: 0
+  isClity: 0
+  isReChoose: 0
 --- !u!212 &651434443
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1247,7 +1251,7 @@ Transform:
   m_GameObject: {fileID: 712297172}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.1165786, y: 3.2470882, z: 0}
+  m_LocalPosition: {x: -4.1165786, y: 3.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1415,7 +1419,7 @@ Transform:
   m_GameObject: {fileID: 799779486}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.75, y: 3.87, z: 0}
+  m_LocalPosition: {x: -9.75, y: 3.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2533,6 +2537,8 @@ MonoBehaviour:
   isChoose: 0
   isPos: 0
   isYesNo: 1
+  isClity: 0
+  isReChoose: 0
 --- !u!1 &1500704770
 GameObject:
   m_ObjectHideFlags: 0

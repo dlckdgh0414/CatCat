@@ -9,6 +9,8 @@ public class ObjData : MonoBehaviour
     public bool isChoose;
     public bool isPos;
     public bool isYesNo;
+    public bool isClity;
+    public bool isReChoose;
     public static ObjData instance;
 
     private void Awake()
