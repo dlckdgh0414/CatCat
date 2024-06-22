@@ -13,9 +13,10 @@ public class Tirgger : MonoBehaviour
     public void YesClik()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(1);
-        Playerpos.transform.position = Vector2.zero;
+        Playerpos.transform.position = new Vector2(57.7F, -21.3f);
         TextManager.Intance.isFreeze = true;
         gameObject.SetActive(false);
+        GameObject.FindGameObjectWithTag("Music2").GetComponent<BackGround2>().StopMusic();
     }
 
     public void No()

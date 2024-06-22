@@ -18,10 +18,6 @@ public class LeftManager : MonoBehaviour
         {
             Intacne = this;
         }
-        else
-        {
-            Destroy(gameObject);
-        }
     }
 
     private void Start()
@@ -29,7 +25,9 @@ public class LeftManager : MonoBehaviour
          for (int i = 0; i < 7; i++)
          {
               CreatFishs(i);
-         }        
+         }
+        creatTime = Random.Range(2f, 5f);
+
     }
     private void Update()
     {

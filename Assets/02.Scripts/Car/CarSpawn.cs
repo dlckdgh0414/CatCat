@@ -5,9 +5,20 @@ using UnityEngine;
 public class CarSpawn : MonoBehaviour
 {
     [SerializeField] GameObject[] CarPrefab;
-    Stack<GameObject> CarPool = new Stack<GameObject>();
+   public Stack<GameObject> CarPool = new Stack<GameObject>();
    [SerializeField] private float creatTime;
-    [SerializeField] private float currentTime;
+     private float currentTime;
+
+    public static CarSpawn Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+       
+    }
 
     private void Start()
     {
@@ -20,14 +31,13 @@ public class CarSpawn : MonoBehaviour
     {
         if (creatTime < currentTime)
         {
-            creatTime = Random.Range(2f, 5f);
+            creatTime = Random.Range(2f, 12f);
             int TrashIdex = Random.Range(0, CarPrefab.Length);
             GameObject TrashObj;
             if (CarPool.Count > 0)
             {
                 TrashObj = CarPool.Pop();
                 TrashObj.SetActive(true);
-
             }
             else
             {

@@ -1103,7 +1103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTime: 0
-  creatTime: 2
+  creatTime: 1.5
   FishPrefab:
   - {fileID: 3729109807269422578, guid: 4443d43e21269ee4c95c7e1ef5bf48b2, type: 3}
   - {fileID: 4573517740540618874, guid: 4d89b0330f5cfcd4da5fb9a57f840360, type: 3}
@@ -4763,8 +4763,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1834812269}
-  - component: {fileID: 1834812268}
   - component: {fileID: 1834812267}
+  - component: {fileID: 1834812270}
   m_Layer: 0
   m_Name: RightSpawn (4)
   m_TagString: Untagged
@@ -4791,30 +4791,6 @@ MonoBehaviour:
   BigTrashSpawnRange: 0
   currentTime: 0
   creatTime: 4.5
---- !u!114 &1834812268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1834812266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8b23e281a8675248bae1ef6eef97377, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTime: 0
-  creatTime: 2
-  GetFishSpawnRange: 0
-  GoldFish: {fileID: 5008855490783666365, guid: 909c7f3800f23724489a78a24babcee1, type: 3}
-  FishPrefab:
-  - {fileID: 8310671074149647207, guid: 45fdf45fa370af04db25027021bf27f5, type: 3}
-  - {fileID: 4984709717440505908, guid: 3b04e6f6e0a7fec4f903cacbc96b408e, type: 3}
-  - {fileID: 4065087726005594900, guid: 860a2716b9d004b4a91ed484acb481f3, type: 3}
-  - {fileID: 325814775267664863, guid: 80f52ea9fe517d54399dddc97080c967, type: 3}
-  - {fileID: 7248533566614366519, guid: 7bf5a284fc2241e4ebad8f3055dd755c, type: 3}
-  - {fileID: 7793513197804521409, guid: 4afe838965803b64b8f9a76512487c31, type: 3}
-  - {fileID: 7793513197804521409, guid: 4afe838965803b64b8f9a76512487c31, type: 3}
 --- !u!4 &1834812269
 Transform:
   m_ObjectHideFlags: 0
@@ -4830,6 +4806,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1834812270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834812266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 236245fd104b5df4194aecd4e63d84e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentTime: 0
+  creatTime: 2
+  FishPrefab: []
 --- !u!1 &1945596747
 GameObject:
   m_ObjectHideFlags: 0
@@ -5116,7 +5107,7 @@ AudioSource:
   m_GameObject: {fileID: 2065487160}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2695969552638638546, guid: e28bf1867d59d2944a7dcd12da451049, type: 2}
   m_audioClip: {fileID: 8300000, guid: 87d3a411fe92b5d4aa90de5d18418700, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -5253,7 +5244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTime: 0
-  creatTime: 2
+  creatTime: 4
   GetFishSpawnRange: 0
   GoldFish: {fileID: 5008855490783666365, guid: 909c7f3800f23724489a78a24babcee1, type: 3}
   FishPrefab:

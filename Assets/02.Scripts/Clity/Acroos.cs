@@ -13,6 +13,6 @@ public class Acroos : MonoBehaviour
     {
         TextManager.Intance.isFreeze = true;
         UnityEngine.SceneManagement.SceneManager.LoadScene(8);
-        Playerpos.transform.position = new Vector2(-9.5f, -2);
+        Playerpos.transform.position = new Vector2(-12f, -2);
     }
 }

@@ -20,11 +20,6 @@ public class FishManager : MonoBehaviour
         {
             Instance = this;
         }
-        else
-        {
-            Destroy(gameObject);
-        }
-            
     }
 
     private void Start()
@@ -33,6 +28,7 @@ public class FishManager : MonoBehaviour
         {
             CreatFishs(i);
         }
+        creatTime = Random.Range(2f, 5f);
     }
     private void Update()
     {
@@ -52,8 +48,8 @@ public class FishManager : MonoBehaviour
             }
             FishObj.transform.position = transform.position;
             currentTime = 0;
-            GetFishSpawnRange = Random.Range(0, 10);
-            if(GetFishSpawnRange<=2)
+            GetFishSpawnRange = Random.Range(0, 15);
+            if(GetFishSpawnRange<=4)
             {
                 GameObject GoldFishObj;
                 if(GoldFishPool.Count >0)

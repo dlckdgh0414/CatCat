@@ -13,9 +13,10 @@ public class GameOver : MonoBehaviour
     }
     public void Restart()
     {
-        Time.timeScale = 1;
         UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        Time.timeScale = 1;
         GameObject.FindGameObjectWithTag("Music").GetComponent<BackGroundMusic>().PlayMusic();
+        Playerpos.SetActive(true);
         Playerpos.transform.position = Vector2.zero;
     }
     

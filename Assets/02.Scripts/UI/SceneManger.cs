@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class SceneManager : MonoBehaviour
 {
+    [SerializeField] GameObject setting;
+    [SerializeField] GameObject KeySettingUi;
     public void next()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(1);
@@ -19,6 +21,11 @@ public class SceneManager : MonoBehaviour
 
     public void Setting()
     {
+        setting.SetActive(true);
+    }
 
+    public void keySetting()
+    {
+        KeySettingUi.SetActive(true);
     }
 }

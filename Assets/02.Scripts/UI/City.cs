@@ -16,7 +16,7 @@ public class City : MonoBehaviour
         if(UIManager.Instance._pool)
         {
             Time.timeScale = 1;
-            Playerpos.transform.position = Vector2.zero;
+            Playerpos.transform.position = new Vector2(-37.1f,9.6f);
             UnityEngine.SceneManagement.SceneManager.LoadScene(6);
             gameObject.SetActive(false);
             GameObject.FindGameObjectWithTag("Music").GetComponent<BackGroundMusic>().StopMusic();
