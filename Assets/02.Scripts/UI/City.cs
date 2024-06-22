@@ -17,14 +17,14 @@ public class City : MonoBehaviour
         {
             Time.timeScale = 1;
             Playerpos.transform.position = Vector2.zero;
-            UnityEngine.SceneManagement.SceneManager.LoadScene(7);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(6);
             gameObject.SetActive(false);
             GameObject.FindGameObjectWithTag("Music").GetComponent<BackGroundMusic>().StopMusic();
             TextManager.Intance.isFreeze = true;
         }
         else
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(8);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(7);
             GameObject.FindGameObjectWithTag("Music").GetComponent<BackGroundMusic>().StopMusic();
             gameObject.SetActive(false);
             TextManager.Intance.isFreeze = true;

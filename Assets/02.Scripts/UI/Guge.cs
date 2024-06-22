@@ -23,7 +23,7 @@ public class Guge : MonoBehaviour
     {
         if(x >= 1)
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(6);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(5);
             GameManager.Instance.Player.SetActive(true);
             GameObject.FindGameObjectWithTag("Music2").GetComponent<BackGround2>().PlayMusic();
         }

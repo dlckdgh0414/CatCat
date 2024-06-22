@@ -11,6 +11,7 @@ public class PlayerDotween : MonoBehaviour
     [SerializeField] Transform drawLineObject;
     [SerializeField] GameObject Player;
     private float _ray = 1;
+    private bool hilleHit = true;
     Rigidbody2D rigid;
 
     private void Awake()
@@ -20,12 +21,16 @@ public class PlayerDotween : MonoBehaviour
     private void Update()
     {
         Ray();
-        if (isHille)
+        if (isHille&&hilleHit)
         {
+            hilleHit = false;
+            StartCoroutine(DelayHit(0.1f));
             transform.DORotate(new Vector3(0, 0, -30), 0.5f);
         }
         else
         {
+            hilleHit = false;
+            StartCoroutine(DelayHit(0.1f));
             transform.DORotate(new Vector3(0, 0, 0), 0.5f);
         }
     }
@@ -36,6 +41,12 @@ public class PlayerDotween : MonoBehaviour
     private void Ray()
     {
         isHille = Physics2D.Raycast(transform.position, Vector2.down, _ray, whatIsHille);
+    }
+
+    IEnumerator DelayHit(float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+        hilleHit = true;
     }
     private void DrawRay()
     {

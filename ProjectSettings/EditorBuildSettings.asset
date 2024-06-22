@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01.Scenes/Path.unity
     guid: 83b2a4a0cf7b5d043bd6f55abcdd6adf
-  - enabled: 1
+  - enabled: 0
     path: Assets/01.Scenes/MingamePool.unity
     guid: 4c506219cbaad4d419f12a833596fd75
   - enabled: 1
@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01.Scenes/GameOver.unity
     guid: 25b3275afe061fc4fac5f9ee70c12a83
+  - enabled: 1
+    path: Assets/01.Scenes/CarGame.unity
+    guid: 1636f91d31da13047a254a92f57222e7
   m_configObjects: {}
