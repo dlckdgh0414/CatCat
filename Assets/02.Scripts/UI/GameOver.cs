@@ -18,6 +18,7 @@ public class GameOver : MonoBehaviour
         Time.timeScale = 1;
         GameObject.FindGameObjectWithTag("Music").GetComponent<BackGroundMusic>().PlayMusic();
         TextManager.Intance.isFreeze = true;
+        UIManager.Instance._pool = false;
         GameManager.Instance.Player.SetActive(true);
         gameObject.SetActive(false);
         Playerpos.transform.position = Vector2.zero;
