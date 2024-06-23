@@ -53,4 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01.Scenes/BackStreet.unity
     guid: 7fc9d022ac2092c40ac3b72259786d58
+  - enabled: 1
+    path: Assets/01.Scenes/House2.unity
+    guid: 79bb4461591109f498081db4a73c0a21
   m_configObjects: {}

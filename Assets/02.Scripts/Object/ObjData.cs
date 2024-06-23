@@ -16,6 +16,8 @@ public class ObjData : MonoBehaviour
     public bool isCityBack;
     public bool isEndingjunction;
     public bool isEnding;
+    public bool isBack;
+    public bool isNextHouse;
     public static ObjData instance;
 
     private void Awake()

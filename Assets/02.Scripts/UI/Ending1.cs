@@ -16,6 +16,8 @@ public class Ending1 : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(11);
         GameObject.FindGameObjectWithTag("Music4").GetComponent<BackGroundMusic4>().StopMusic();
+        TextManager.Intance.isFreeze = true;
+        Playerpos.transform.position = new Vector2(0.74f, -4.53f);
         Playerpos.SetActive(false);
         gameObject.SetActive(false);
     }
