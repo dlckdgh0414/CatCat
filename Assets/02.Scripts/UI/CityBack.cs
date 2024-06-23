@@ -16,12 +16,14 @@ public class CityBack : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(6);
         Playerpos.transform.position = new Vector2(106.18f, -5.42f);
         TextManager.Intance.isFreeze = true;
+        gameObject.SetActive(false);
     }
 
     public void NoClik()
     {
         gameObject.SetActive(false);
         TextManager.Intance.isFreeze = true;
+        gameObject.SetActive(false);
     }
 
 }

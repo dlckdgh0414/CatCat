@@ -12,7 +12,9 @@ public class Ending2 : MonoBehaviour
     public void Yes()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(12);
+        gameObject.SetActive(false);
         Playerpos.transform.position = new Vector2(0.74f, -4.53f);
+        GameObject.FindGameObjectWithTag("Music4").GetComponent<BackGroundMusic4>().StopMusic();
         TextManager.Intance.isFreeze = true;
         Playerpos.SetActive(false);
     }

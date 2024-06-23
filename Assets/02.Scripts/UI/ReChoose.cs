@@ -12,9 +12,9 @@ public class ReChoose : MonoBehaviour
 
     public void UpBottun()
     {
-        TextManager.Intance.isFreeze = true;
         UnityEngine.SceneManagement.SceneManager.LoadScene(3);
         Playerpos.transform.position = Vector2.zero;
+        TextManager.Intance.isFreeze = true;
         GameObject.FindGameObjectWithTag("Music2").GetComponent<BackGround2>().StopMusic();
         GameObject.FindGameObjectWithTag("Music").GetComponent<BackGroundMusic>().PlayMusic();
         gameObject.SetActive(false);
