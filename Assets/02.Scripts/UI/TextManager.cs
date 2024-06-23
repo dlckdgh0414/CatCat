@@ -16,6 +16,11 @@ public class TextManager : MonoBehaviour
     [SerializeField] GameObject YesOrNochoose;
     [SerializeField] GameObject CityUi;
     [SerializeField] GameObject reChoose;
+    [SerializeField] GameObject Hille;
+    [SerializeField] GameObject towne;
+    [SerializeField] GameObject CityBack;
+    [SerializeField] GameObject EndingJ;
+    [SerializeField] GameObject Ending;
     public bool isAction { get; private set; }
     public bool isFreeze {  get;  set; }
     public GameObject TalkPanel
@@ -41,6 +46,9 @@ public class TextManager : MonoBehaviour
         YesOrNochoose.SetActive(false);
         CityUi.SetActive(false);
         reChoose.SetActive(false);
+        CityBack.SetActive(false);
+        EndingJ.SetActive(false);
+        Ending.SetActive(false);
     }
 
     public int talkIndex;
@@ -50,12 +58,12 @@ public class TextManager : MonoBehaviour
             isAction = true;
             scanObject = scanObj;
             ObjData objData = scanObject.GetComponent<ObjData>();
-            Talk(objData.id, objData.isNPC,objData.isChoose, objData.isPos,objData.isYesNo,objData.isClity, objData.isReChoose);
+            Talk(objData.id, objData.isNPC,objData.isChoose, objData.isPos,objData.isYesNo,objData.isClity, objData.isReChoose,objData.isHille,objData.isTown,objData.isCityBack,objData.isEndingjunction,objData.isEnding);
         
         talkPanel.SetActive(isAction);
     }
 
-    void Talk(int id, bool isNPC, bool isChoose, bool isPos, bool isYesNo, bool isClity, bool isReChoose)
+    void Talk(int id, bool isNPC, bool isChoose, bool isPos, bool isYesNo, bool isClity, bool isReChoose, bool isHille, bool isTown, bool isCityBack,bool isEndingjunction, bool isEnding)
     {
         string talkData = talkManager.GetTalk(id, talkIndex);
 
@@ -85,6 +93,31 @@ public class TextManager : MonoBehaviour
             {
                 isFreeze = false;
                 reChoose.SetActive(true);
+            } 
+            if(isHille)
+            {
+                isFreeze = false;
+                Hille.SetActive(true);
+            } 
+            if(isTown)
+            {
+                isFreeze = false;
+                towne.SetActive(true);
+            }
+            if(isCityBack)
+            {
+                isFreeze = false;
+                CityBack.SetActive(true);
+            }
+            if(isEndingjunction)
+            {
+                isFreeze = false;
+                EndingJ.SetActive(true);
+            } 
+            if(isEnding)
+            {
+                isFreeze = false;
+                Ending.SetActive(true);
             }
 
             talkIndex = 0; //대화가 끝날 때 0으로 초기화 , 다른 사물하고도 계속 대화를 진행 하기 위함.

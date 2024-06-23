@@ -11,6 +11,11 @@ public class ObjData : MonoBehaviour
     public bool isYesNo;
     public bool isClity;
     public bool isReChoose;
+    public bool isHille;
+    public bool isTown;
+    public bool isCityBack;
+    public bool isEndingjunction;
+    public bool isEnding;
     public static ObjData instance;
 
     private void Awake()

@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Acroos : MonoBehaviour
 {
-    [SerializeField] GameObject Playerpos; 
+    [SerializeField] GameObject Playerpos;
+    AcroosSinge singe;
     private void Start()
     {
         Playerpos = GameObject.Find("Player");
+        singe = GetComponent<AcroosSinge>();
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        TextManager.Intance.isFreeze = true;
-        UnityEngine.SceneManagement.SceneManager.LoadScene(8);
-        Playerpos.transform.position = new Vector2(-12f, -2);
+        if(!singe.isOn)
+        { 
+            UnityEngine.SceneManagement.SceneManager.LoadScene(8);
+            GameObject.FindGameObjectWithTag("Music3").GetComponent<BackGroundMusic3>().StopMusic();
+            Playerpos.transform.position = new Vector2(-12f, -2);
+        }
     }
 }

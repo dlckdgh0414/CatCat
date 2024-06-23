@@ -34,15 +34,19 @@ public class TalkManager : MonoBehaviour
         talkData.Add(6, new string[] { "고양이는 아직 배를 채우지 못했습니다. 그래도 돌아가실 건가요?" });
         talkData.Add(7, new string[] { "다시 돌아가실건가요?" });
         talkData.Add(8, new string[] { "표지판에 도시로 내려가는길이라 써져있다", "도시로 내려가볼까?", "*주의 아직까지 고양이에게 밥을 안줬다면 위험할수도있습니다.", "밥을 줬다면 도시로 내려가볼까요?" });
-        talkData.Add(9, new string[] { "배도 채웠으니 이제 산책로로 내려가볼까?"});
+        talkData.Add(9, new string[] { "배도 채웠으니 이제 산책로로 내려가볼까?" });
         talkData.Add(10, new string[] { "앞에 횡단보도가 있다.", "빨간불일때 지나가면 위험하겠지?" });
-        talkData.Add(11, new string[] {"자판기다.","가격을 보니 겜마고 보다 저렴한거같다.","고양이만 아니였음 뽑아 먹었다." });
-        talkData.Add(12, new string[] {"일반 쓰레기통이다.","쓰레기통을 볼때마다 분리수거생각이난다." });
-        talkData.Add(13, new string[] {"재활용 쓰레기통이다","재활용 쓰레기통에 일반쓰레기도 좀 들어있는거같다.","재활용좀하지.."});
-        talkData.Add(14, new string[] {"다시 산책로로 돌아갈건가요?","돌아가도 다시 일로 와야합니다..."});
-        talkData.Add(15, new string[] {"버스정류장이다 의자에 쓰레기가 놓여져있네요.","버스는 지금 운영하지 않는거같네요.."});
-        talkData.Add(16, new string[] {"소화전이다."});
-        talkData.Add(17, new string[] {"전등이다.","마우스 클릭으로 크고 킬수있을거같은 기분이다."});
+        talkData.Add(11, new string[] { "자판기다.", "가격을 보니 겜마고 보다 저렴한거같다.", "고양이만 아니였음 뽑아 먹었다." });
+        talkData.Add(12, new string[] { "일반 쓰레기통이다.", "쓰레기통을 볼때마다 분리수거생각이난다." });
+        talkData.Add(13, new string[] { "재활용 쓰레기통이다", "재활용 쓰레기통에 일반쓰레기도 좀 들어있는거같다.", "재활용좀하지.." });
+        talkData.Add(14, new string[] { "다시 산책로로 돌아갈건가요?", "돌아가도 다시 일로 와야합니다..." });
+        talkData.Add(15, new string[] { "버스정류장이다 의자에 쓰레기가 놓여져있네요.", "버스는 지금 운영하지 않는거같네요.." });
+        talkData.Add(16, new string[] { "소화전이다." });
+        talkData.Add(17, new string[] { "전등이다.", "이건 고장나서 켜져있지 않는거같다.." });
+        talkData.Add(18, new string[] { "마을입구라 적혀있는 표지판이다.", "가면 마을 입구로 갈수 있을거같다. 가볼까?" });
+        talkData.Add(19, new string[] { "산책로가는길이라고 적혀있는 표지판이다.", "다시 산책로가는길로 돌아갈까?" });
+        talkData.Add(20, new string[] { "박스다.", "박스를 보니 안에 들어가고싶다..", "들어가볼까?" });
+        talkData.Add(21, new string[] { "바로 앞에 뒷골목이 있는거같다.", "뒷골목으로 가볼까?" });
     }
 
 

@@ -14,6 +14,7 @@ public class FinalCar : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(6);
+        GameObject.FindGameObjectWithTag("Music3").GetComponent<BackGroundMusic3>().PlayMusic();
         Playerpos.transform.position = new Vector2(65.3F, -0.4f);
     }
 }

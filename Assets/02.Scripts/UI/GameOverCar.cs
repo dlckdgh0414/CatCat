@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using KoreanTyper;
 
-public class GameOverCar : MonoBehaviour
+public class Endingdfajfafasf : MonoBehaviour
 {
     public TextMeshProUGUI[] TestTexts;
     [SerializeField] GameObject[] Buttons;

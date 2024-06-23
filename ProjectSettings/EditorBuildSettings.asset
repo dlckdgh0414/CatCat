@@ -38,4 +38,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01.Scenes/GameOverCar.unity
     guid: 50e28364481f4bc40848c248748f9650
+  - enabled: 1
+    path: Assets/01.Scenes/Town.unity
+    guid: 0b9057a7630cb904ca04ec2816ee48c7
+  - enabled: 1
+    path: Assets/01.Scenes/Ending1.unity
+    guid: 3e988248738d40545ba0b959345b5916
+  - enabled: 1
+    path: Assets/01.Scenes/Ending2.unity
+    guid: 4b1568407f1e0dc4494e99248fcaeac1
+  - enabled: 1
+    path: Assets/01.Scenes/House.unity
+    guid: afeb13b7369d42249ab054837c79652e
+  - enabled: 1
+    path: Assets/01.Scenes/BackStreet.unity
+    guid: 7fc9d022ac2092c40ac3b72259786d58
   m_configObjects: {}
