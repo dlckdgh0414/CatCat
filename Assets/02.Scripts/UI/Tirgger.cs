@@ -17,6 +17,7 @@ public class Tirgger : MonoBehaviour
         TextManager.Intance.isFreeze = true;
         gameObject.SetActive(false);
         GameObject.FindGameObjectWithTag("Music2").GetComponent<BackGround2>().StopMusic();
+        GameObject.FindGameObjectWithTag("Music").GetComponent<BackGroundMusic>().PlayMusic();
     }
 
     public void No()

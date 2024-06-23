@@ -123,12 +123,12 @@ public class TextManager : MonoBehaviour
                 isFreeze = false;
                 Ending.SetActive(true);
             }
-            if(isEnding)
+            if(isNextHouse)
             {
                 isFreeze = false;
                 goI.SetActive(true);
             }
-            if(isEnding)
+            if(isBack)
             {
                 isFreeze = false;
                 Reset.SetActive(true);

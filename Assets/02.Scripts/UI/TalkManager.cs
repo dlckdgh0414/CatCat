@@ -52,7 +52,7 @@ public class TalkManager : MonoBehaviour
         talkData.Add(24, new string[] { "대장님 이제 출발합시다!","이제 후일담은 끝났습니다..","다시 처음부터해서 다른엔딩을 볼까요?" });
         talkData.Add(25, new string[] { "자고있는거같다..","이제 곧 출발할텐데..","암튼 우리 막내다." });
         talkData.Add(26, new string[] { "대장님 오셨군요","이제 곧 출발할테니 기다리고있겠습니다."});
-        talkData.Add(27, new string[] { "소녀: 어 나비다!! 나비야 일로와!!","주인에게 안기며 고양이는 행복하게 지내는거같군요.","다시 처음부터 엔딩을볼까요?"});
+        talkData.Add(27, new string[] { "소녀: 어 나비다!! 나비야 일로와!!","주인에게 안기며 고양이는 행복하게 지내는거같군요.","다시 처음부터 다른엔딩을볼까요?"});
         
     }
 

@@ -15,5 +15,6 @@ public class GNDLFEKA : MonoBehaviour
     {
         GameManager.Instance.Player.SetActive(true);
         UnityEngine.SceneManagement.SceneManager.LoadScene(ScenName);
+        GameObject.FindGameObjectWithTag("Music5").GetComponent<BackGround5>().PlayMusic();
     }
 }

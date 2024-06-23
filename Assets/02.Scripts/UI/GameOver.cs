@@ -9,6 +9,7 @@ public class GameOver : MonoBehaviour
 
     private void Awake()
     {
+        gameObject.SetActive(true);
         Playerpos = GameObject.Find("Player");
     }
     public void Restart()
@@ -16,12 +17,15 @@ public class GameOver : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(1);
         Time.timeScale = 1;
         GameObject.FindGameObjectWithTag("Music").GetComponent<BackGroundMusic>().PlayMusic();
+        TextManager.Intance.isFreeze = true;
         GameManager.Instance.Player.SetActive(true);
+        gameObject.SetActive(false);
         Playerpos.transform.position = Vector2.zero;
     }
     
     public void Exit()
     {
         Application.Quit();
+        TextManager.Intance.isFreeze = true;
     }
 }
