@@ -9,9 +9,9 @@ public class Acroos : MonoBehaviour
     private void Start()
     {
         Playerpos = GameObject.Find("Player");
-        singe = GetComponent<AcroosSinge>();
+        singe = GetComponentInParent<AcroosSinge>();
     }
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if(!singe.isOn)
         { 

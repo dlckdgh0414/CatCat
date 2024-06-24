@@ -26,6 +26,7 @@ public class PlayerDotween : MonoBehaviour
             hilleHit = false;
             StartCoroutine(DelayHit(0.1f));
             transform.DORotate(new Vector3(0, 0, -30), 0.5f);
+            rigid.gravityScale = 10;
         }
         else
         {

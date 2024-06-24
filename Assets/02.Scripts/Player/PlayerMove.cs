@@ -10,7 +10,7 @@ public class PlayerMove : MonoBehaviour
     SpriteRenderer sprit;
     private readonly int walkHash = Animator.StringToHash("Walk");
     public Vector2 move;
-    public bool catMove = true;
+    public bool catMove;
     public float x;
     
 
@@ -36,7 +36,7 @@ public class PlayerMove : MonoBehaviour
         {
             Move();
         }
-        
+       
     }
 
     public void Move()
@@ -45,7 +45,17 @@ public class PlayerMove : MonoBehaviour
 
         move = new Vector2(x * speed, rigid.velocity.y);
         rigid.velocity = move;
-        anim.SetBool(walkHash, move.magnitude > 0);
+
+        anim.SetFloat(walkHash, move.magnitude);
+
+        if(move.magnitude > 0)
+        {
+            catMove = true;
+        }
+        else
+        {
+            catMove = false;
+        }
 
         if(move.x<0)
         {

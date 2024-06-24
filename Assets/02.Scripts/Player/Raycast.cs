@@ -8,10 +8,12 @@ public class Raycast : MonoBehaviour
     private Vector2 _size = new Vector2(1f, 1f);
     [SerializeField] private GameObject taxtUi;
     private GameObject scanObject;
+    PlayerRub run;
 
     private void Awake()
     {
         taxtUi.SetActive(false);
+        run = GetComponent<PlayerRub>();
     }
 
     private void OnDrawGizmos()
@@ -23,7 +25,7 @@ public class Raycast : MonoBehaviour
     {
         CheackHuman();
 
-        if (Input.GetKeyDown(KeyCode.F) && scanObject != null && TextManager.Intance.isFreeze)
+        if (Input.GetKeyDown(KeyCode.F) && scanObject != null && TextManager.Intance.isFreeze && !run.isRun && TextEffect.Intance.isEffting)
         {
            TextManager.Intance.Action(scanObject);
         }

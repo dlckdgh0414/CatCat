@@ -4,16 +4,27 @@ using TMPro;
 
 public class TextEffect : MonoBehaviour
 {
-     private string _targetMsg;
+    private string _targetMsg;
     public int CharPerSceonds;
     [SerializeField] GameObject EndCursor;
     [SerializeField] TMP_Text _text;
     int index;
     float interval;
+    public bool isEffting = true;
+
+    public static TextEffect Intance;
 
     private void Awake()
     {
         //_text = GetComponent<TMP_Text>();
+        if(Intance == null)
+        {
+            Intance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void SetMsg(string msg)
@@ -40,6 +51,7 @@ public class TextEffect : MonoBehaviour
                 EffectEnd();
                 yield break;
             }
+            isEffting = false;
             _text.text += _targetMsg[index];
             index++;
             yield return new WaitForSeconds(interval);
@@ -48,5 +60,6 @@ public class TextEffect : MonoBehaviour
     private void EffectEnd()
     {
         EndCursor.SetActive(true);
+        isEffting = true;
     }
 }
