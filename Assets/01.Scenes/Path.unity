@@ -1033,6 +1033,11 @@ MonoBehaviour:
   isReChoose: 0
   isHille: 0
   isTown: 0
+  isCityBack: 0
+  isEndingjunction: 0
+  isEnding: 0
+  isBack: 0
+  isNextHouse: 0
 --- !u!61 &211223160
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1324,7 +1329,7 @@ Transform:
   m_GameObject: {fileID: 226444437}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.24806665, w: 0.968743}
-  m_LocalPosition: {x: 83.34, y: -34.170002, z: -2215.5}
+  m_LocalPosition: {x: 83.34, y: -34.31, z: -2215.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2034,6 +2039,11 @@ MonoBehaviour:
   isReChoose: 0
   isHille: 0
   isTown: 0
+  isCityBack: 0
+  isEndingjunction: 0
+  isEnding: 0
+  isBack: 0
+  isNextHouse: 0
 --- !u!50 &321013641
 Rigidbody2D:
   serializedVersion: 4
@@ -3380,7 +3390,7 @@ Transform:
   m_GameObject: {fileID: 612142108}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.20960318, w: 0.9777866}
-  m_LocalPosition: {x: 83.95, y: -34.66, z: -2215.221}
+  m_LocalPosition: {x: 83.95, y: -34.77, z: -2215.221}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3508,6 +3518,11 @@ MonoBehaviour:
   isReChoose: 0
   isHille: 0
   isTown: 0
+  isCityBack: 0
+  isEndingjunction: 0
+  isEnding: 0
+  isBack: 0
+  isNextHouse: 0
 --- !u!61 &673019155
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5323,6 +5338,11 @@ MonoBehaviour:
   isReChoose: 0
   isHille: 0
   isTown: 0
+  isCityBack: 0
+  isEndingjunction: 0
+  isEnding: 0
+  isBack: 0
+  isNextHouse: 0
 --- !u!1 &1060542446
 GameObject:
   m_ObjectHideFlags: 0
@@ -6356,13 +6376,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1369202281}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0031128218, y: 0.01121273, z: -0.2674801, w: 0.9634931}
-  m_LocalPosition: {x: 85.69, y: -35.389996, z: -2215.53}
+  m_LocalRotation: {x: -0.0034007565, y: 0.011128787, z: -0.24256063, w: 0.9700665}
+  m_LocalPosition: {x: 85.69, y: -35.42, z: -2215.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 804957278}
-  m_LocalEulerAnglesHint: {x: 0, y: 1.334, z: -31.031}
+  m_LocalEulerAnglesHint: {x: -0.069, y: 1.332, z: -28.078}
 --- !u!212 &1369202283
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6693,7 +6713,7 @@ Transform:
   m_GameObject: {fileID: 1496492908}
   serializedVersion: 2
   m_LocalRotation: {x: -0.005642685, y: 0.0021744159, z: -0.2385267, w: 0.97111714}
-  m_LocalPosition: {x: 86.91, y: -36.039997, z: -2215.56}
+  m_LocalPosition: {x: 86.87, y: -36.039997, z: -2215.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11976,6 +11996,11 @@ MonoBehaviour:
   isReChoose: 0
   isHille: 0
   isTown: 0
+  isCityBack: 0
+  isEndingjunction: 0
+  isEnding: 0
+  isBack: 0
+  isNextHouse: 0
 --- !u!61 &1748520397
 BoxCollider2D:
   m_ObjectHideFlags: 0
