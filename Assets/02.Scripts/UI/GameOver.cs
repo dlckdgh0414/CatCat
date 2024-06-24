@@ -14,11 +14,12 @@ public class GameOver : MonoBehaviour
     }
     public void Restart()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
         Time.timeScale = 1;
         TextManager.Intance.isFreeze = true;
         gameObject.SetActive(false);
         UIManager.Instance._pool = false;
+        Playerpos.transform.position = Vector2.zero;
         GameObject.FindGameObjectWithTag("Music5").GetComponent<BackGround5>().StopMusic();
     }
     

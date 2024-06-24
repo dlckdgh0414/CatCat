@@ -54,7 +54,7 @@ public class TalkManager : MonoBehaviour
         talkData.Add(26, new string[] { "대장님 오셨군요","이제 곧 출발할테니 기다리고있겠습니다."});
         talkData.Add(27, new string[] { "소녀: 어 나비다!! 나비야 일로와!!","주인에게 안기며 고양이는 행복하게 지내는거같군요.","다시 처음부터 다른엔딩을볼까요?"});
         talkData.Add(28, new string[] { "지하철 역이있네요.","매일 기숙사올때 보는 범계역이 떠오르네요.","기숙사 가기 싫어.","지하철은 운영하지않는거같네요."});
-        talkData.Add(29, new string[] { "고양이가 먹는 밥 그릇같습니다.", "비워져있는거보니 이미 밥을 먹은거같군요" });        
+        talkData.Add(29, new string[] { "고양이가 먹는 밥 그릇같습니다.", "비워져있는거보니 이미 밥을 먹은거같습니다." });        
     }
 
 

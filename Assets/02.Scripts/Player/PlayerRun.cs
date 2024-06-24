@@ -15,9 +15,14 @@ public class PlayerRub : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftShift) && TextManager.Intance.isFreeze && player.catMove )
+        PlayerRun();
+    }
+
+    private void PlayerRun()
+    {
+        if (Input.GetKey(KeyCode.LeftShift) && TextManager.Intance.isFreeze && player.catMove)
         {
-            player.speed = 15f;
+            player.speed = 13.5f;
             anim.SetBool("Run", true);
             isRun = true;
         }

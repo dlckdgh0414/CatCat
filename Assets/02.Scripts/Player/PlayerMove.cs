@@ -52,7 +52,7 @@ public class PlayerMove : MonoBehaviour
         {
             catMove = true;
         }
-        else
+        else if(move.magnitude == 0)
         {
             catMove = false;
         }
