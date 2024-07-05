@@ -10,9 +10,11 @@ public class SceneManager : MonoBehaviour
     [SerializeField] GameObject setting;
     [SerializeField] GameObject KeySettingUi;
     [SerializeField] GameObject Playerpos;
+    [SerializeField] GameObject MusicSetting;
     private void Start()
     {
         Playerpos = GameObject.Find("Player");
+        MusicSetting = GameObject.Find("Setting");
     }
     public void next()
     {
@@ -29,7 +31,7 @@ public class SceneManager : MonoBehaviour
 
     public void Setting()
     {
-        setting.SetActive(true);
+        GameManager.Instance.Menu.SetActive(true);
     }
 
     public void keySetting()

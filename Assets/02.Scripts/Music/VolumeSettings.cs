@@ -66,6 +66,7 @@ public class VolumeSettings : MonoBehaviour
     {
         gameObject.SetActive(false);
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        GameObject.FindGameObjectWithTag("Music").GetComponent<BackGroundMusic>().StopMusic();
     }
 
     public void XButton()

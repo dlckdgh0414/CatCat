@@ -25,7 +25,7 @@ public class Raycast : MonoBehaviour
     {
         CheackHuman();
 
-        if (Input.GetKeyDown(KeyCode.F) && scanObject != null && TextManager.Intance.isFreeze && !run.isRun && TextEffect.Intance.isEffting)
+        if (Input.GetKeyDown(KeyCode.F) && !run.isRun && TextEffect.Intance.isEffting)
         {
            TextManager.Intance.Action(scanObject);
         }

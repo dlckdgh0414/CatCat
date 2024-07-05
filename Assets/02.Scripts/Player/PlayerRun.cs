@@ -22,16 +22,17 @@ public class PlayerRub : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftShift) && TextManager.Intance.isFreeze && player.catMove)
         {
-            player.speed = 13.5f;
-            anim.SetBool("Run", true);
+            player.speed = 12.5f;
+            anim.SetBool("PlayerRun", true);
             isRun = true;
         }
         else if (Input.GetKeyUp(KeyCode.LeftShift) && TextManager.Intance.isFreeze)
         {
             player.speed = 5f;
-            anim.SetBool("Run", false);
+            anim.SetBool("PlayerRun", false);
             isRun = false;
         }
+
     }
 
     IEnumerator delay()

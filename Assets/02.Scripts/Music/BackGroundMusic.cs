@@ -13,7 +13,7 @@ public class BackGroundMusic : MonoBehaviour
             Intance = this;
         else
             Destroy(gameObject);
-        DontDestroyOnLoad(transform.gameObject);
+        DontDestroyOnLoad(gameObject);
         _audioSource = GetComponent<AudioSource>();
     }
 
