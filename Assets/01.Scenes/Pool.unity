@@ -149,8 +149,8 @@ Transform:
   m_GameObject: {fileID: 95768331}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0573, y: -0.020000458, z: 10}
-  m_LocalScale: {x: 0.9132415, y: 0.42419076, z: 1}
+  m_LocalPosition: {x: 0.0573, y: 0.1784, z: 10}
+  m_LocalScale: {x: 0.9132415, y: 0.4471395, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1440528529}
@@ -911,6 +911,13 @@ MonoBehaviour:
   isYesNo: 0
   isClity: 0
   isReChoose: 0
+  isHille: 0
+  isTown: 0
+  isCityBack: 0
+  isEndingjunction: 0
+  isEnding: 0
+  isBack: 0
+  isNextHouse: 0
 --- !u!114 &590577958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1047,6 +1054,13 @@ MonoBehaviour:
   isYesNo: 0
   isClity: 0
   isReChoose: 0
+  isHille: 0
+  isTown: 0
+  isCityBack: 0
+  isEndingjunction: 0
+  isEnding: 0
+  isBack: 0
+  isNextHouse: 0
 --- !u!212 &651434443
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2323,6 +2337,7 @@ GameObject:
   - component: {fileID: 1440528527}
   - component: {fileID: 1440528526}
   - component: {fileID: 1440528525}
+  - component: {fileID: 1440528530}
   m_Layer: 0
   m_Name: 'Main Camera '
   m_TagString: MainCamera
@@ -2487,6 +2502,30 @@ Transform:
   - {fileID: 2055157256}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1440528530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440528524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88f5cead0c0b2a4eb05b5900433f8d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
+  m_AssetsPPU: 16
+  m_RefResolutionX: 200
+  m_RefResolutionY: 120
+  m_CropFrame: 0
+  m_GridSnapping: 0
+  m_FilterMode: 0
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
 --- !u!1 &1446204103
 GameObject:
   m_ObjectHideFlags: 0
@@ -2680,6 +2719,13 @@ MonoBehaviour:
   isYesNo: 1
   isClity: 0
   isReChoose: 0
+  isHille: 0
+  isTown: 0
+  isCityBack: 0
+  isEndingjunction: 0
+  isEnding: 0
+  isBack: 0
+  isNextHouse: 0
 --- !u!1 &1500704770
 GameObject:
   m_ObjectHideFlags: 0
@@ -2843,8 +2889,8 @@ Transform:
   m_GameObject: {fileID: 1519894233}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1704, y: -0.0800004, z: 10}
-  m_LocalScale: {x: 0.9008497, y: 0.42419076, z: 1}
+  m_LocalPosition: {x: 0.1704, y: 0.1151, z: 10}
+  m_LocalScale: {x: 0.9008497, y: 0.4471395, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1440528529}
@@ -7128,8 +7174,8 @@ Transform:
   m_GameObject: {fileID: 1777580417}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0696, y: 0.0302, z: 10}
-  m_LocalScale: {x: 0.91605955, y: 0.42419076, z: 1}
+  m_LocalPosition: {x: 0.0696, y: 0.2313, z: 10}
+  m_LocalScale: {x: 0.91605955, y: 0.4471395, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1440528529}
@@ -7212,8 +7258,8 @@ Transform:
   m_GameObject: {fileID: 1790928351}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0801, y: -0.04000044, z: 10}
-  m_LocalScale: {x: 0.90915674, y: 0.42419076, z: 1}
+  m_LocalPosition: {x: 0.0801, y: 0.1573, z: 10}
+  m_LocalScale: {x: 0.90915674, y: 0.4471395, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1440528529}
@@ -7615,8 +7661,8 @@ Transform:
   m_GameObject: {fileID: 2055157255}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0677, y: 0, z: 10}
-  m_LocalScale: {x: 0.9021819, y: 0.42419076, z: 1}
+  m_LocalPosition: {x: 0.0677, y: 0.1994, z: 10}
+  m_LocalScale: {x: 0.9021819, y: 0.4471395, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1440528529}

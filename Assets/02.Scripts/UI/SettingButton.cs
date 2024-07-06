@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class SettingButton : MonoBehaviour
 {
+    [SerializeField] GameObject settingUi;
     public void SettingButtonClik()
     {
-        SettingUi.Instance.Player.SetActive(true);
+        settingUi.gameObject.SetActive(true);
     }
 }
