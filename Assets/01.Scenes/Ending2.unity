@@ -829,7 +829,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 999750316}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a11413845ffca24458fae233e6274bb0, type: 3}
+  m_Script: {fileID: 11500000, guid: 2243d84d25ab5cc42b4753471c318a3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Playerpos: {fileID: 0}
@@ -1165,7 +1165,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 999750323}
-        m_TargetAssemblyTypeName: GNDLFEKA, Assembly-CSharp
+        m_TargetAssemblyTypeName: BackStreet, Assembly-CSharp
         m_MethodName: B
         m_Mode: 3
         m_Arguments:
@@ -1402,8 +1402,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -28.82, y: -34.59}
-  m_SizeDelta: {x: 2254.33, y: 1541.15}
+  m_AnchoredPosition: {x: -28.82, y: -100.67}
+  m_SizeDelta: {x: 2254.33, y: 1673.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1929032237
 MonoBehaviour:

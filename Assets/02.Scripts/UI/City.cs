@@ -20,7 +20,9 @@ public class City : MonoBehaviour
             UnityEngine.SceneManagement.SceneManager.LoadScene(6);
             gameObject.SetActive(false);
             GameObject.FindGameObjectWithTag("Music").GetComponent<BackGroundMusic>().StopMusic();
+            GameObject.FindGameObjectWithTag("Music3").GetComponent<BackGroundMusic3>().PlayMusic();
             TextManager.Intance.isFreeze = true;
+            TextManager.Intance.isChoosing = false;
         }
         else
         {
@@ -28,6 +30,7 @@ public class City : MonoBehaviour
             GameObject.FindGameObjectWithTag("Music").GetComponent<BackGroundMusic>().StopMusic();
             gameObject.SetActive(false);
             TextManager.Intance.isFreeze = true;
+            TextManager.Intance.isChoosing = false;
         }
     }
 
@@ -35,5 +38,6 @@ public class City : MonoBehaviour
     {
         Time.timeScale = 1;
         gameObject.SetActive(false);
+        TextManager.Intance.isChoosing = false;
     }
 }

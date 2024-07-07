@@ -20,8 +20,12 @@ public class GameOver : MonoBehaviour
         gameObject.SetActive(false);
         UIManager.Instance._pool = false;
         Playerpos.transform.position = Vector2.zero;
-        GameObject.FindGameObjectWithTag("Music5").GetComponent<BackGround5>().StopMusic();
         GameObject.FindGameObjectWithTag("Music").GetComponent<BackGroundMusic>().PlayMusic();
+        if(Ending2.Intance.isEnd)
+        {
+            TextEffect.Intance.end = true;
+            GameObject.FindGameObjectWithTag("Music5").GetComponent<BackGround5>().StopMusic();
+        }
     }
     
     public void Exit()

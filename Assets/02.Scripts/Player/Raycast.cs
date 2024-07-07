@@ -8,12 +8,20 @@ public class Raycast : MonoBehaviour
     private Vector2 _size = new Vector2(1f, 1f);
     [SerializeField] private GameObject taxtUi;
     private GameObject scanObject;
-    PlayerRub run;
+    private PlayerRub run;
+    public bool skip;
+    public static Raycast Intance;
 
-    private void Awake()
-    {
+        private void Awake()
+   {
         taxtUi.SetActive(false);
         run = GetComponent<PlayerRub>();
+        if (Intance == null)
+        {
+            Intance = this;
+        }
+        else
+            Destroy(gameObject);
     }
 
     private void OnDrawGizmos()
@@ -25,18 +33,19 @@ public class Raycast : MonoBehaviour
     {
         CheackHuman();
 
-        if (Input.GetKeyDown(KeyCode.F) && !run.isRun && TextEffect.Intance.isEffting)
+        if (Input.GetKeyDown(KeyCode.F) && !run.isRun && TextEffect.Intance.isEffting&&!TextManager.Intance.isChoosing)
         {
-           TextManager.Intance.Action(scanObject);
+            TextManager.Intance.Action(scanObject);
         }
-    }
-    private void CheackHuman()
-    {
-        isHuman = Physics2D.BoxCast(transform.position, _size, 0,transform.position ,ray, whatisHuman);
-    }
-
-    private void FixedUpdate()
-    {
+        //else if(Input.GetKeyDown(KeyCode.Space) && scanObject != null)
+        //{
+        //    skip = true;
+        //    TextManager.Intance.TalkPanel.SetActive(false);
+        //}
+        //else if(Input.GetKeyDown(KeyCode.Space) && scanObject == null)
+        //{
+        //    skip = false;
+        //}
         RaycastHit2D raycastHit = Physics2D.BoxCast(transform.position, _size, 0, transform.position, ray, whatisHuman);
 
         if(raycastHit.collider != null)
@@ -45,8 +54,14 @@ public class Raycast : MonoBehaviour
         }
         else
         {
-            scanObject = null; 
+            TextManager.Intance.TalkPanel.SetActive(false);
+            TextManager.Intance.isAction = false;
         }
+      
+    }
+    private void CheackHuman()
+    {
+        isHuman = Physics2D.BoxCast(transform.position, _size, 0,transform.position ,ray, whatisHuman);
     }
     private void gizmo()
     {

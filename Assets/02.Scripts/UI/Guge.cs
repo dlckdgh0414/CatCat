@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using System;
 
 public class Guge : MonoBehaviour
 {
     [SerializeField] GameObject GameOver;
+    [SerializeField] TextMeshProUGUI fulltext;
 
-
-    public  float x = 0f;
+    public float x = 0f;
 
     [SerializeField] Image FishGage;
 
@@ -17,6 +18,15 @@ public class Guge : MonoBehaviour
     private void Update()
     {
         FishGage.fillAmount = x;
+        if(x==100)
+        {
+            x = 100;
+        }
+        fulltext.text = "∏Ò«•∑Æ: " + x * 100 + "/100";
+        if(x<=0)
+        {
+            x = 0;
+        }
         MaxGage();
     }
     private void MaxGage()

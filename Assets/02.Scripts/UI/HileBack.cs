@@ -20,10 +20,12 @@ public class HileBack : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(3);
         TextManager.Intance.isFreeze = true;
         Playerpos.transform.position = new Vector2(109F, -30.748f);
+        TextManager.Intance.isChoosing = false;
     }
 
     public void NoClik()
     {
         gameObject.SetActive(false);
+        TextManager.Intance.isChoosing = false;
     }
 }

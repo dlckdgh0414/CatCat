@@ -20,6 +20,10 @@ public class UIManager : MonoBehaviour
         {
             Instance = this;
         }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Start()
@@ -35,6 +39,9 @@ public class UIManager : MonoBehaviour
         TextManager.Intance.isFreeze = true;
         gameObject.SetActive(false);
         GameObject.FindGameObjectWithTag("Music").GetComponent<BackGroundMusic>().StopMusic();
+        GameObject.FindGameObjectWithTag("Music2").GetComponent<BackGround2>().PlayMusic();
+        TextManager.Intance.isChoosing = false;
+        Tirgger.Instance._pool = true;
     }
     public void DownOnClik(int sceneNum)
     {
@@ -44,5 +51,6 @@ public class UIManager : MonoBehaviour
         TextManager.Intance.isFreeze = true;
         gameObject.SetActive(false);
         GameObject.FindGameObjectWithTag("Music").GetComponent<BackGroundMusic>().PlayMusic();
+        TextManager.Intance.isChoosing = false;
     }
 }

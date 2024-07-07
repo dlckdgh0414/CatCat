@@ -20,11 +20,13 @@ public class Town : MonoBehaviour
         TextManager.Intance.isFreeze = true;
         GameObject.FindGameObjectWithTag("Music3").GetComponent<BackGroundMusic3>().StopMusic();
         gameObject.SetActive(false);
-        GameObject.FindGameObjectWithTag("Music4").GetComponent<BackGroundMusic4>().StopMusic();
+        GameObject.FindGameObjectWithTag("Music4").GetComponent<BackGroundMusic4>().PlayMusic();
+        TextManager.Intance.isChoosing = false;
     }
 
     public void NoClik()
     {
         gameObject.SetActive(false);
+        TextManager.Intance.isChoosing = false;
     }
 }

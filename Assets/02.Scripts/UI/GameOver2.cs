@@ -13,7 +13,7 @@ public class GameOver2 : MonoBehaviour
     }
     public void Restart()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(6);
         Time.timeScale = 1;
         TextManager.Intance.isFreeze = true;
         UIManager.Instance._pool = false;

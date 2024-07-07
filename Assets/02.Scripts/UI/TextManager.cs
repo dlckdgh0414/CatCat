@@ -23,8 +23,9 @@ public class TextManager : MonoBehaviour
     [SerializeField] GameObject Ending;
     [SerializeField] GameObject goI;
     [SerializeField] GameObject Reset;
-    public bool isAction { get; private set; }
-    public bool isFreeze {  get;  set; }
+    public bool isAction;
+    [SerializeField] public bool isFreeze = true;
+    public bool isChoosing { get; set; }
     public GameObject TalkPanel
     {
         get => talkPanel;
@@ -77,79 +78,172 @@ public class TextManager : MonoBehaviour
             {
                 isFreeze = false;
                 Choose.SetActive(true);
+                isChoosing = true;
             }
             if(isPos)
             {
                 isFreeze = false;
                 ChoosePoolPath.SetActive(true);
+                isChoosing = true;
             }
             if (isYesNo)
             {
                 isFreeze = false;
                 YesOrNochoose.SetActive(true);
+                isChoosing = true;
             }
             if(isClity)
             {
                 isFreeze = false;
                 CityUi.SetActive(true);
+                isChoosing = true;
             }  
             if(isReChoose)
             {
                 isFreeze = false;
                 reChoose.SetActive(true);
+                isChoosing = true;
             } 
             if(isHille)
             {
                 isFreeze = false;
                 Hille.SetActive(true);
+                isChoosing = true;
             } 
             if(isTown)
             {
                 isFreeze = false;
                 towne.SetActive(true);
+                isChoosing = true;
             }
             if(isCityBack)
             {
                 isFreeze = false;
                 CityBack.SetActive(true);
+                isChoosing = true;
             }
             if(isEndingjunction)
             {
                 isFreeze = false;
                 EndingJ.SetActive(true);
+                isChoosing = true;
             } 
             if(isEnding)
             {
                 isFreeze = false;
                 Ending.SetActive(true);
+                isChoosing = true;
             }
             if(isNextHouse)
             {
                 isFreeze = false;
                 goI.SetActive(true);
+                isChoosing = true;
             }
             if(isBack)
             {
                 isFreeze = false;
                 Reset.SetActive(true);
+                isChoosing = true;
             }
 
             talkIndex = 0; //대화가 끝날 때 0으로 초기화 , 다른 사물하고도 계속 대화를 진행 하기 위함.
+            isFreeze = true;
             isAction = false;
             return;  // 끝 , void 함수에서 return은 강제 종료 역할.
         }
-
-
         if (isNPC)
         {
             TalkEffect.SetMsg(talkData.Split(':')[0]);
         }
+
+        //if (Raycast.Intance.skip)
+        //{
+        //    if (isChoose)
+        //    {
+        //        isFreeze = false;
+        //        Choose.SetActive(true);
+        //        isChoosing = true;
+        //    }
+        //    if (isPos)
+        //    {
+        //        isFreeze = false;
+        //        ChoosePoolPath.SetActive(true);
+        //        isChoosing = true;
+        //    }
+        //    if (isYesNo)
+        //    {
+        //        isFreeze = false;
+        //        YesOrNochoose.SetActive(true);
+        //        isChoosing = true;
+        //    }
+        //    if (isClity)
+        //    {
+        //        isFreeze = false;
+        //        CityUi.SetActive(true);
+        //        isChoosing = true;
+        //    }
+        //    if (isReChoose)
+        //    {
+        //        isFreeze = false;
+        //        reChoose.SetActive(true);
+        //        isChoosing = true;
+        //    }
+        //    if (isHille)
+        //    {
+        //        isFreeze = false;
+        //        Hille.SetActive(true);
+        //        isChoosing = true;
+        //    }
+        //    if (isTown)
+        //    {
+        //        isFreeze = false;
+        //        towne.SetActive(true);
+        //        isChoosing = true;
+        //    }
+        //    if (isCityBack)
+        //    {
+        //        isFreeze = false;
+        //        CityBack.SetActive(true);
+        //        isChoosing = true;
+        //    }
+        //    if (isEndingjunction)
+        //    {
+        //        isFreeze = false;
+        //        EndingJ.SetActive(true);
+        //        isChoosing = true;
+        //    }
+        //    if (isEnding)
+        //    {
+        //        isFreeze = false;
+        //        Ending.SetActive(true);
+        //        isChoosing = true;
+        //    }
+        //    if (isNextHouse)
+        //    {
+        //        isFreeze = false;
+        //        goI.SetActive(true);
+        //        isChoosing = true;
+        //    }
+        //    if (isBack)
+        //    {
+        //        isFreeze = false;
+        //        Reset.SetActive(true);
+        //        isChoosing = true;
+        //    }
+        //    Raycast.Intance.skip = false;
+        //    talkIndex = 0; //대화가 끝날 때 0으로 초기화 , 다른 사물하고도 계속 대화를 진행 하기 위함.
+        //    isFreeze = true;
+        //    isAction = false;
+        //    return;  // 끝 , void 함수에서 return은 강제 종료 역할.
+        //}
 
         else
         {
             TalkEffect.SetMsg(talkData);
         }
         isAction = true;
+        isFreeze = true;
         talkIndex++;
     }
 }

@@ -5,6 +5,22 @@ using UnityEngine;
 public class Ending2 : MonoBehaviour
 {
    [SerializeField] GameObject Playerpos;
+    public bool isEnd { get; set; }
+
+    public static Ending2 Intance;
+
+    private void Awake()
+    {
+       if(Intance == null)
+        {
+            Intance = this;
+        }
+       else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void Start()
     {
         Playerpos = GameObject.Find("Player");

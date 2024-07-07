@@ -6,7 +6,7 @@ using UnityEngine;
 public class TalkManager : MonoBehaviour
 {
     //[SerializeField] private TextDataListSO textDataListSO;
-    Dictionary<int, string[]> talkData;
+     public Dictionary<int, string[]> talkData;
 
     public static TalkManager Inatnce;
 
@@ -74,7 +74,10 @@ public class TalkManager : MonoBehaviour
         if (talkIndex == talkData[id].Length)
             return null;
         else
+        { 
             return talkData[id][talkIndex];
+        }
+
     }
 
     private void OnEnable()

@@ -20,6 +20,8 @@ public class Ending1 : MonoBehaviour
         Playerpos.transform.position = new Vector2(0.74f, -4.53f);
         Playerpos.SetActive(false);
         gameObject.SetActive(false);
+        Ending2.Intance.isEnd = true;
+        
     }
 
     public void NoButton()
