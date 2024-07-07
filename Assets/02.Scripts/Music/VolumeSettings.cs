@@ -23,11 +23,10 @@ public class VolumeSettings : MonoBehaviour
             SetMusicVolume();
             SetSFXVolume();
         }
-        if (Inatnce != null)
-            Destroy(gameObject);
-        else
+        if(Inatnce == null)
             Inatnce = this;
         gameObject.SetActive(false);
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Update()

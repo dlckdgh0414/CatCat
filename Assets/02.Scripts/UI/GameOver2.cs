@@ -19,6 +19,7 @@ public class GameOver2 : MonoBehaviour
         UIManager.Instance._pool = false;
         GameManager.Instance.Player.SetActive(true); 
         gameObject.SetActive(false);
+        GameObject.FindGameObjectWithTag("Music3").GetComponent<BackGroundMusic3>().PlayMusic();
     }
 
     public void Exit()

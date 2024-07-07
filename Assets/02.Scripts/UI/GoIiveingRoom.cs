@@ -15,12 +15,14 @@ public class GoIiveingRoom : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(15);
         TextManager.Intance.isFreeze = true;
         gameObject.SetActive(false);
-        
+        TextManager.Intance.isChoosing = false;
+
     }
 
     public void NoClik()
     {
         TextManager.Intance.isFreeze = true;
         gameObject.SetActive(false);
+        TextManager.Intance.isChoosing = false;
     }
 }

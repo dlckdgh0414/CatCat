@@ -11,17 +11,8 @@ public class TextEffect : MonoBehaviour
     int index;
     float interval;
     public bool isEffting = true;
-    public bool end = false;
 
     public static TextEffect Intance;
-
-    private void Update()
-    {
-        if(Ending2.Intance.isEnd)
-        {
-            isEffting = false;
-        }
-    }
 
     private void Awake()
     {

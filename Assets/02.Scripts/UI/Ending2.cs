@@ -33,5 +33,6 @@ public class Ending2 : MonoBehaviour
         GameObject.FindGameObjectWithTag("Music4").GetComponent<BackGroundMusic4>().StopMusic();
         TextManager.Intance.isFreeze = true;
         Playerpos.SetActive(false);
+        TextManager.Intance.isChoosing = false;
     }
 }

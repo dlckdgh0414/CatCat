@@ -43,6 +43,11 @@ public class TextManager : MonoBehaviour
         else
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
+        NewMethod();
+    }
+
+    private void NewMethod()
+    {
         isFreeze = true;
         Choose.SetActive(false);
         ChoosePoolPath.SetActive(false);
@@ -76,72 +81,85 @@ public class TextManager : MonoBehaviour
         {
             if (isChoose)
             {
+                isAction = true;    
                 isFreeze = false;
+                Debug.Log(isFreeze);
                 Choose.SetActive(true);
                 isChoosing = true;
             }
             if(isPos)
             {
+                isAction = true;
                 isFreeze = false;
                 ChoosePoolPath.SetActive(true);
                 isChoosing = true;
             }
             if (isYesNo)
             {
+                isAction = true;
                 isFreeze = false;
                 YesOrNochoose.SetActive(true);
                 isChoosing = true;
             }
             if(isClity)
             {
+                isAction = true;
                 isFreeze = false;
                 CityUi.SetActive(true);
                 isChoosing = true;
             }  
             if(isReChoose)
             {
+                isAction = true;
                 isFreeze = false;
                 reChoose.SetActive(true);
                 isChoosing = true;
             } 
             if(isHille)
             {
+                isAction = true;
                 isFreeze = false;
                 Hille.SetActive(true);
                 isChoosing = true;
             } 
             if(isTown)
             {
+                isAction = true;
                 isFreeze = false;
                 towne.SetActive(true);
                 isChoosing = true;
             }
             if(isCityBack)
             {
+                isAction = true;
                 isFreeze = false;
                 CityBack.SetActive(true);
                 isChoosing = true;
             }
             if(isEndingjunction)
             {
+                isAction = true;
                 isFreeze = false;
                 EndingJ.SetActive(true);
                 isChoosing = true;
             } 
             if(isEnding)
             {
-                isFreeze = false;
+                isAction = true;
                 Ending.SetActive(true);
+                isFreeze = false;
                 isChoosing = true;
             }
             if(isNextHouse)
             {
+                isAction = true;
                 isFreeze = false;
                 goI.SetActive(true);
                 isChoosing = true;
             }
             if(isBack)
             {
+                isAction = true;
                 isFreeze = false;
                 Reset.SetActive(true);
                 isChoosing = true;
@@ -157,93 +175,11 @@ public class TextManager : MonoBehaviour
             TalkEffect.SetMsg(talkData.Split(':')[0]);
         }
 
-        //if (Raycast.Intance.skip)
-        //{
-        //    if (isChoose)
-        //    {
-        //        isFreeze = false;
-        //        Choose.SetActive(true);
-        //        isChoosing = true;
-        //    }
-        //    if (isPos)
-        //    {
-        //        isFreeze = false;
-        //        ChoosePoolPath.SetActive(true);
-        //        isChoosing = true;
-        //    }
-        //    if (isYesNo)
-        //    {
-        //        isFreeze = false;
-        //        YesOrNochoose.SetActive(true);
-        //        isChoosing = true;
-        //    }
-        //    if (isClity)
-        //    {
-        //        isFreeze = false;
-        //        CityUi.SetActive(true);
-        //        isChoosing = true;
-        //    }
-        //    if (isReChoose)
-        //    {
-        //        isFreeze = false;
-        //        reChoose.SetActive(true);
-        //        isChoosing = true;
-        //    }
-        //    if (isHille)
-        //    {
-        //        isFreeze = false;
-        //        Hille.SetActive(true);
-        //        isChoosing = true;
-        //    }
-        //    if (isTown)
-        //    {
-        //        isFreeze = false;
-        //        towne.SetActive(true);
-        //        isChoosing = true;
-        //    }
-        //    if (isCityBack)
-        //    {
-        //        isFreeze = false;
-        //        CityBack.SetActive(true);
-        //        isChoosing = true;
-        //    }
-        //    if (isEndingjunction)
-        //    {
-        //        isFreeze = false;
-        //        EndingJ.SetActive(true);
-        //        isChoosing = true;
-        //    }
-        //    if (isEnding)
-        //    {
-        //        isFreeze = false;
-        //        Ending.SetActive(true);
-        //        isChoosing = true;
-        //    }
-        //    if (isNextHouse)
-        //    {
-        //        isFreeze = false;
-        //        goI.SetActive(true);
-        //        isChoosing = true;
-        //    }
-        //    if (isBack)
-        //    {
-        //        isFreeze = false;
-        //        Reset.SetActive(true);
-        //        isChoosing = true;
-        //    }
-        //    Raycast.Intance.skip = false;
-        //    talkIndex = 0; //대화가 끝날 때 0으로 초기화 , 다른 사물하고도 계속 대화를 진행 하기 위함.
-        //    isFreeze = true;
-        //    isAction = false;
-        //    return;  // 끝 , void 함수에서 return은 강제 종료 역할.
-        //}
-
         else
         {
             TalkEffect.SetMsg(talkData);
         }
-        isAction = true;
-        isFreeze = true;
+        isFreeze = false;
         talkIndex++;
     }
 }

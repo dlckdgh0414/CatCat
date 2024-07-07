@@ -18,10 +18,6 @@ public class Guge : MonoBehaviour
     private void Update()
     {
         FishGage.fillAmount = x;
-        if(x==100)
-        {
-            x = 100;
-        }
         fulltext.text = "∏Ò«•∑Æ: " + x * 100 + "/100";
         if(x<=0)
         {
